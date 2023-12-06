@@ -1,0 +1,123 @@
+main.frontpage {
+    section.banner {
+        background: imgUrl('banner.jpg') center top;
+        background-size: cover;
+        padding-top: 490px;
+
+        .services {
+            background: linear-gradient(0deg, rgba(4, 24, 48, 0.72) 44.39%, rgba(4, 24, 48, 0.00) 100%);
+        }
+    }
+
+    section.envision {
+        background: imgUrl('envision.jpg') center top;
+        height: 1003px;
+        position: relative;
+        overflow: hidden;
+        transition: 1s all ease-in-out;
+
+        &:hover {
+            background-position: center bottom;
+        }
+    }
+
+    #homepageProjectsSlider {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 9px;
+            width: 370px;
+            height: 550px;
+
+            &.slick-current.slick-center {
+                width: 988px;
+            }
+
+            .inner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 50px 0;
+                height: 100%;
+                width: auto;
+                display: flex;
+                flex-wrap: nowrap;
+                background: linear-gradient(90deg, #0E2941 13.15%, rgba(14, 41, 65, 0.53) 58.43%, rgba(14, 41, 65, 0.00) 82.18%);
+
+                .inner-left {
+                    padding: 0 25px 0 50px;
+                    width: 370px;
+                }
+
+                .inner-right {
+                    padding: 0 50px 0 25px;
+                    width: 618px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    .innerSlider {
+
+                        .slick-list,
+                        .slick-track,
+                        .slick-slide {
+                            height: 100%;
+                        }
+
+                        .slick-slide {
+                            margin: 0 6px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slick-dots {
+            li {
+                height: 7px;
+                width: 7px;
+
+                button {
+                    padding: 0;
+                    height: 7px;
+                    width: 7px;
+
+                    &::before {
+                        height: 7px;
+                        width: 7px;
+                        background: white;
+                        border-radius: 50%;
+                        content: "";
+                        opacity: 0.2;
+                        line-height: 1;
+                    }
+                }
+
+                &.slick-active button::before {
+                    opacity: 0.75;
+                }
+            }
+        }
+    }
+
+    section.who-we-are {
+        background: rgba(0, 173, 238, 0.1);
+        padding: 168px 0;
+
+        .cta-box {
+            padding: 32px;
+
+            .img {
+                height: 230px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

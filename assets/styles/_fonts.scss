@@ -1,0 +1,17 @@
+@import url("https://use.typekit.net/sxk3jql.css");
+
+$font-owners: "owners-wide", sans-serif;
+$font-century: "century-gothic", sans-serif;
+
+$font-body: $font-owners;
+
+$font-families: (
+    "owners": "owners-wide",
+    "century": "century-gothic",
+);
+
+@each $name, $font-family in $font-families {
+    .font-#{$name} {
+        font-family: $font-family, sans-serif;
+    }
+}
