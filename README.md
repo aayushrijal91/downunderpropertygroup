@@ -1,14 +1,14 @@
 This is a Wordpress Development theme template that uses Bootstrap CSS and jQuery
 
-# Wordpress Website [Test](http://www.test.com.au/)
+# Wordpress Website [Downunder Property group](http://www.test.com.au/)
 
 ## _Author Information_
 
-Developer: [Aayush Rijal](https://github.com/aayushrijal91)
+Developer: [Aayush Rijal](https://aayushrijal.info/)
 
-[Github](https://www.figma.com/file/PyuJjoA9K8Jps2xMw5rXDe/Crystal-Hot-Water?type=design&mode=design&t=j71fAvPuwNILzdoA-0)
+[Github](https://github.com/aayushrijal91/downunderpropertygroup)
 
-[Figma]()
+[Figma](https://www.figma.com/file/GqmhhijRZfUJboZqbljwsl/Custom-website?node-id=86%3A430&mode=dev)
 
 ## _Instruction_
 
