@@ -32,11 +32,27 @@ get_template_part('parts/section', 'nav');
                         </p>
 
                         <ul class="ps-0 mt-3 d-flex flex-column gap-1">
-                            <li><a href="" class="text-white text-capitalize font-century">Site Acquisition and due dilegence</a></li>
-                            <li><a href="" class="text-white text-capitalize font-century">Strategic Developments advice and feasibility services</a></li>
-                            <li><a href="" class="text-white text-capitalize font-century">Development management</a></li>
-                            <li><a href="" class="text-white text-capitalize font-century">Luxury New Homes</a></li>
-                            <li><a href="" class="text-white text-capitalize font-century">Duplexes & Townhouses</a></li>
+                            <?php
+                            $args = array(
+                                'post_type'      => 'page',
+                                'posts_per_page' => -1,
+                                'order'          => 'ASC',
+                                'orderby'        => 'publish_date',
+                                'meta_query' => array(
+                                    array(
+                                        'key' => '_wp_page_template',
+                                        'value' => array('page-templates/inner-services.php'),
+                                    ),
+                                )
+                            );
+                            $the_query = new WP_Query($args);
+                            if ($the_query->have_posts()) :
+                                while ($the_query->have_posts()) : $the_query->the_post();
+                            ?>
+                                    <li><a href="<?= get_the_permalink() ?>" class="text-white text-capitalize font-century"><?= get_the_title() ?></a></li>
+                            <?php endwhile;
+                            endif;
+                            wp_reset_query(); ?>
                         </ul>
                     </div>
 

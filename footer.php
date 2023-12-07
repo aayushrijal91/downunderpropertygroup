@@ -8,30 +8,46 @@
             <div class="row">
                 <div class="col-3">
                     <p class="fs-12 font-century text-primary pb-2">Learn more about us</p>
-                    <a href="#" class="fs-25 fw-500 text-white">Our Story</a>
+                    <a href="<?= home_url() ?>/about-us" class="fs-25 fw-500 text-white">Our Story</a>
 
                     <p class="fs-12 font-century text-primary pt-5 pb-2">Speak to an expert today!</p>
-                    <a href="#" class="fs-25 fw-500 text-white">Contact us</a>
+                    <a href="<?= get_field('contact_us_link', 'options')['url'] ?>" class="fs-25 fw-500 text-white">Contact us</a>
 
                     <a href="<?= get_field('contact_us_link', 'options')['url'] ?>" target="<?= get_field('contact_us_link', 'options')['target'] ?>" class="btn btn-purple rounded-1 d-inline-flex text-white px-5 fs-14 fw-500 mt-5">Enquire now</a>
                 </div>
 
                 <div class="col-3">
                     <p class="fs-12 font-century text-primary pb-2">Explore all we have to offer</p>
-                    <a href="#" class="fs-25 fw-500 text-white">Our Services</a>
+                    <p class="fs-25 fw-500">Our Services</p>
 
                     <ul class="ps-0 pt-4 d-flex flex-column gap-3">
-                        <li><a href="" class="fs-14 text-light-blue fw-300">Site Acquisition and due diligence</a></li>
-                        <li><a href="" class="fs-14 text-light-blue fw-300">Strategic Developments advice & feasibility services</a></li>
-                        <li><a href="" class="fs-14 text-light-blue fw-300">Development management</a></li>
-                        <li><a href="" class="fs-14 text-light-blue fw-300">Luxury New Homes</a></li>
-                        <li><a href="" class="fs-14 text-light-blue fw-300">Duplexes & Townhouses</a></li>
+                        <?php
+                        $args = array(
+                            'post_type'      => 'page',
+                            'posts_per_page' => -1,
+                            'order'          => 'ASC',
+                            'orderby'        => 'publish_date',
+                            'meta_query' => array(
+                                array(
+                                    'key' => '_wp_page_template',
+                                    'value' => array('page-templates/inner-services.php'),
+                                ),
+                            )
+                        );
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) : $the_query->the_post();
+                        ?>
+                                <li><a href="<?= get_the_permalink() ?>" class="fs-14 text-light-blue fw-300"><?= get_the_title() ?></a></li>
+                        <?php endwhile;
+                        endif;
+                        wp_reset_query(); ?>
                     </ul>
                 </div>
 
                 <div class="col-3">
                     <p class="fs-12 font-century text-primary pb-2">Discover our luxury finishes</p>
-                    <a href="#" class="fs-25 fw-500 text-white">Our Projects</a>
+                    <a href="<?= home_url() ?>/projects" class="fs-25 fw-500 text-white">Our Projects</a>
 
                     <ul class="ps-0 pt-4 d-flex flex-column gap-3">
                         <li><a href="" class="fs-14 text-light-blue fw-300">Project name 01</a></li>
@@ -52,14 +68,14 @@
             </div>
         </div>
     </section>
-
-    <div class="py-7 text-center">
-        <img src="<?= get_field('footer_logo', 'options')['url'] ?>" alt="<?= get_field('footer_logo', 'options')['url'] ?>" />
-    </div>
 </div>
 
 <div class="container">
-    <div class="row justify-content-between align-items-center py-5">
+    <div class="row justify-content-between align-items-center pt-7 pb-5 gy-7">
+        <div class="col-12 text-center">
+            <img src="<?= get_field('footer_logo', 'options')['url'] ?>" alt="<?= get_field('footer_logo', 'options')['url'] ?>" />
+        </div>
+
         <div class="col-auto">
             <div class="row gx-2">
                 <?php if (have_rows('socials', 'options')) :
@@ -80,7 +96,7 @@
         </p>
 
         <div class="col-auto">
-            <a href="" class="">
+            <a href="https://www.aiims.com.au/this-is-us" target="_blank">
                 <img src="<?= get_template_directory_uri() ?>/assets/images/lib/aiims-logo.png" alt="Aiims">
             </a>
         </div>

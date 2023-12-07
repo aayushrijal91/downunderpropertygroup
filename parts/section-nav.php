@@ -9,9 +9,9 @@
 
             <div class="col-auto">
                 <ul class="d-flex gap-5">
-                    <li><a href="" class="text-white ">Our Story</a></li>
+                    <li><a href="<?= home_url() ?>/about-us" class="text-white ">Our Story</a></li>
                     <li><a href="" class="text-white ">Our Services</a></li>
-                    <li><a href="" class="text-white ">Our Projects</a></li>
+                    <li><a href="<?= home_url() ?>/projects" class="text-white ">Our Projects</a></li>
                 </ul>
             </div>
 
