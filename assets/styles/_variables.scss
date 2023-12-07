@@ -3,6 +3,8 @@ $secondary: #00ADEE;
 $teal: #3597AF;
 $purple: #B083FB;
 $deep-blue: #041830;
+$blue: #0E2941;
+$light-blue: #F3FAFC;
 $black: #000000;
 $white: #ffffff;
 // $dark: #232323;
@@ -13,24 +15,25 @@ $grey: #747474;
 $light: #D9D9D9;
 
 
-$theme-colors: () !default;
-$theme-colors: map-merge(
-    (
-        "primary": $primary,
-        "secondary": $secondary,
-        "teal": $teal,
-        "purple": $purple,
-        "deep-blue": $deep-blue,
-        "black": $black,
-        "white": $white,
-        // "dark": $dark,
-        // "light-grey": $light-grey,
-        // "dark-grey": $dark-grey,
-        // "jet-black": $jet-black,
-        "grey": $grey,
-        "light": $light,
-    ),
-    $theme-colors
+$theme-colors: (
+    ) !default;
+$theme-colors: map-merge(("primary": $primary,
+            "secondary": $secondary,
+            "teal": $teal,
+            "purple": $purple,
+            "blue": $blue,
+            "deep-blue": $deep-blue,
+            "light-blue": $light-blue,
+            "black": $black,
+            "white": $white,
+            // "dark": $dark,
+            // "light-grey": $light-grey,
+            // "dark-grey": $dark-grey,
+            // "jet-black": $jet-black,
+            "grey": $grey,
+            "light": $light,
+        ),
+        $theme-colors
 );
 
 // Grid Breakpoints
@@ -41,7 +44,7 @@ $grid-breakpoints: (
     lg: 992px,
     xl: 1440px,
     xxl: 1748px,
-) !default;
+    ) !default;
 
 // Container sizing
 $container-max-widths: (
@@ -50,7 +53,7 @@ $container-max-widths: (
     lg: 1280px,
     xl: 1319px,
     xxl: 1320px,
-) !default;
+    ) !default;
 
 $spacer: 1rem !default;
 $spacers: (
@@ -85,6 +88,7 @@ $spacers: map-merge((0: 0,
 $font-sizes: (
     65: 65px,
     45: 45px,
+    35: 35px,
     25: 25px,
     20: 20px,
     18: 18px,

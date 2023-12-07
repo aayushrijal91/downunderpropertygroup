@@ -1,6 +1,6 @@
 This is a Wordpress Development theme template that uses Bootstrap CSS and jQuery
 
-# Wordpress Website [Downunder Property group](http://www.test.com.au/)
+# [Downunder Property group](http://www.test.com.au/)
 
 ## _Author Information_
 
