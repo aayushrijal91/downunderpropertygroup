@@ -7,85 +7,88 @@ get_header();
 get_template_part('parts/section', 'nav');
 ?>
 
-<main class="frontpage mt-0">
-    <section class="banner">
+<section class="homeBanner">
+    <div class="container">
+        <p class="fs-25">Welcome to <?= bloginfo('name'); ?>...</p>
+        <p class="fs-65 fw-500 text-capitalize lh-1 pt-4">Building Dreams, Creating Futures</p>
+    </div>
+
+    <hr class="my-5" />
+
+    <div class="services pb-5">
         <div class="container">
-            <p class="fs-25">Welcome to <?= bloginfo('name'); ?>...</p>
-            <p class="fs-65 fw-500 text-capitalize lh-1 pt-4">Building Dreams, Creating Futures</p>
-        </div>
+            <div class="row">
+                <div class="col-5">
+                    <p class="fs-25 fw-500">
+                        <span class="pe-4">Our Services</span>
+                        <a href="">
+                            <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24.9512" cy="25.1802" r="24.9131" fill="#B083FB" />
+                                <path d="M26.1077 15.9346L35.3539 25.1808L26.1077 34.4271" stroke="#F3FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M35.3541 25.1807H14.55" stroke="#F3FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </p>
 
-        <hr class="my-5" />
+                    <ul class="ps-0 mt-3 d-flex flex-column gap-1">
+                        <?php
+                        $args = array(
+                            'post_type'      => 'page',
+                            'posts_per_page' => -1,
+                            'order'          => 'ASC',
+                            'orderby'        => 'publish_date',
+                            'meta_query' => array(
+                                array(
+                                    'key' => '_wp_page_template',
+                                    'value' => array('page-templates/inner-services.php'),
+                                ),
+                            )
+                        );
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) : $the_query->the_post();
+                        ?>
+                                <li><a href="<?= get_the_permalink() ?>" class="text-white text-capitalize font-century"><?= get_the_title() ?></a></li>
+                        <?php endwhile;
+                        endif;
+                        wp_reset_query(); ?>
+                    </ul>
+                </div>
 
-        <div class="services pb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-5">
-                        <p class="fs-25 fw-500">
-                            <span class="pe-4">Our Services</span>
-                            <a href="">
-                                <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="24.9512" cy="25.1802" r="24.9131" fill="#B083FB" />
-                                    <path d="M26.1077 15.9346L35.3539 25.1808L26.1077 34.4271" stroke="#F3FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M35.3541 25.1807H14.55" stroke="#F3FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </p>
+                <div class="col-5">
+                    <p class="fs-25 fw-500">
+                        <span class="pe-4">Our Projects</span>
+                        <a href="">
+                            <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24.9512" cy="25.1802" r="24.9131" fill="#B083FB" />
+                                <path d="M26.1077 15.9346L35.3539 25.1808L26.1077 34.4271" stroke="#F3FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M35.3541 25.1807H14.55" stroke="#F3FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </p>
 
-                        <ul class="ps-0 mt-3 d-flex flex-column gap-1">
-                            <?php
-                            $args = array(
-                                'post_type'      => 'page',
-                                'posts_per_page' => -1,
-                                'order'          => 'ASC',
-                                'orderby'        => 'publish_date',
-                                'meta_query' => array(
-                                    array(
-                                        'key' => '_wp_page_template',
-                                        'value' => array('page-templates/inner-services.php'),
-                                    ),
-                                )
-                            );
-                            $the_query = new WP_Query($args);
-                            if ($the_query->have_posts()) :
-                                while ($the_query->have_posts()) : $the_query->the_post();
-                            ?>
-                                    <li><a href="<?= get_the_permalink() ?>" class="text-white text-capitalize font-century"><?= get_the_title() ?></a></li>
-                            <?php endwhile;
-                            endif;
-                            wp_reset_query(); ?>
-                        </ul>
-                    </div>
-
-                    <div class="col-5">
-                        <p class="fs-25 fw-500">
-                            <span class="pe-4">Our Projects</span>
-                            <a href="">
-                                <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="24.9512" cy="25.1802" r="24.9131" fill="#B083FB" />
-                                    <path d="M26.1077 15.9346L35.3539 25.1808L26.1077 34.4271" stroke="#F3FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M35.3541 25.1807H14.55" stroke="#F3FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </p>
-
-                        <ul class="ps-0 mt-3 d-flex flex-column gap-1">
-                            <li><a href="" class="text-white text-capitalize font-century">Project Name 01</a></li>
-                            <li><a href="" class="text-white text-capitalize font-century">Project Name 02</a></li>
-                            <li><a href="" class="text-white text-capitalize font-century">Project Name 03</a></li>
-                            <li><a href="" class="text-white text-capitalize font-century">Project Name 04</a></li>
-                            <li><a href="" class="text-white text-capitalize font-century">Project Name 05</a></li>
-                        </ul>
-                    </div>
+                    <ul class="ps-0 mt-3 d-flex flex-column gap-1">
+                        <li><a href="" class="text-white text-capitalize font-century">Project Name 01</a></li>
+                        <li><a href="" class="text-white text-capitalize font-century">Project Name 02</a></li>
+                        <li><a href="" class="text-white text-capitalize font-century">Project Name 03</a></li>
+                        <li><a href="" class="text-white text-capitalize font-century">Project Name 04</a></li>
+                        <li><a href="" class="text-white text-capitalize font-century">Project Name 05</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="d-flex justify-content-center py-10">
-        <div class="col-xl-5 text-center">
+<main class="frontpage mt-0">
+    <div class="container py-10">
+        <div class="mx-auto col-xl-7 text-center">
             <p class="text-primary fs-45 fw-500">Discover a world of luxury, sophistication, & modern living.</p>
             <p class="pt-5 fs-25">We're not just another property development company.</p>
-            <p class="font-century py-5 lh-1_5">Welcome to DownUnder Property Group, where luxury, sophistication, and modern living converge to create extraordinary properties that redefine the art of living. We are not just another property development company; we are visionaries who breathe life into dreams, architects of luxury, and creators of exceptional living spaces. Our unwavering commitment to quality, innovation, and customer-centricity sets us apart in the world of property development.</p>
+
+            <article class="font-century py-5 lh-1_67">
+                Welcome to DownUnder Property Group, where luxury, sophistication, and modern living converge to create extraordinary properties that redefine the art of living. We are not just another property development company; we are visionaries who breathe life into dreams, architects of luxury, and creators of exceptional living spaces. Our unwavering commitment to quality, innovation, and customer-centricity sets us apart in the world of property development.
+            </article>
 
             <div class="col-auto row justify-content-center gx-3">
                 <div class="col-auto">
@@ -97,7 +100,7 @@ get_template_part('parts/section', 'nav');
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <section class="envision d-flex align-items-end">
         <div class="container">

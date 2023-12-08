@@ -1,14 +1,14 @@
-main.frontpage {
-    section.banner {
-        background: imgUrl('banner.jpg') center top;
-        background-size: cover;
-        padding-top: 490px;
+section.homeBanner {
+    background: imgUrl('banner.jpg') center top;
+    background-size: cover;
+    padding-top: 490px;
 
-        .services {
-            background: linear-gradient(0deg, rgba(4, 24, 48, 0.72) 44.39%, rgba(4, 24, 48, 0.00) 100%);
-        }
+    .services {
+        background: linear-gradient(0deg, rgba(4, 24, 48, 0.72) 44.39%, rgba(4, 24, 48, 0.00) 100%);
     }
+}
 
+main.frontpage {
     section.envision {
         background: imgUrl('envision.jpg') center top;
         height: 1003px;
@@ -223,5 +223,27 @@ main.frontpage {
                 object-fit: cover;
             }
         }
+    }
+}
+
+main.aboutUsPage {
+    section.introduction {
+        .introduction-card {
+            background: rgba(53, 151, 175, 0.2);
+
+            .image {
+                height: 130px;
+            }
+        }
+    }
+
+    section.established {
+        .established-image {
+            height: 662px;
+        }
+    }
+
+    section.vision {
+        
     }
 }
