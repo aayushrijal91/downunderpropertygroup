@@ -2,9 +2,11 @@
 <section class="banner py-5">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-8">
-                <h1 class="fs-45"><?= $banner['title'] ?></h1>
-            </div>
+            <?php if (isset($banner['title'])) : ?>
+                <div class="col-8">
+                    <h1 class="fs-45"><?= $banner['title'] ?></h1>
+                </div>
+            <?php endif; ?>
 
             <?php if (isset($banner['next_page_link']) && !empty($banner['next_page_link']['url']) && !empty($banner['link_title'])) : ?>
                 <div class="col-auto">
@@ -22,9 +24,11 @@
         </div>
     </div>
 
-    <div class="container-fluid px-5 py-7">
-        <div class="heroImage">
-            <img class="h-100 w-100 object-fit-cover" src="<?= $banner['hero_image']['url'] ?>" alt="<?= $banner['hero_image']['alt'] ?>">
+    <?php if (isset($banner['hero_image']['url'])) : ?>
+        <div class="container-fluid px-5 py-7">
+            <div class="heroImage">
+                <img class="h-100 w-100 object-fit-cover" src="<?= $banner['hero_image']['url'] ?>" alt="<?= $banner['hero_image']['alt'] ?>">
+            </div>
         </div>
-    </div>
+    <?php endif; ?>
 </section>

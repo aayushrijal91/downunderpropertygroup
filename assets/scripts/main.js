@@ -58,6 +58,14 @@ jQuery(function ($) {
                     autoplay: true,
                     autoplaySpeed: 2000,
                     speed: 1000,
+                });
+
+                $('.vision-slider').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplay: true,
                 })
             }, // end misc
         }, // end ui

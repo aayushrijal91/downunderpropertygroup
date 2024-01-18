@@ -18,3 +18,74 @@ section.banner {
         overflow: hidden;
     }
 }
+
+section#journey-begins-slider {
+    .slick-track {
+        display: flex;
+    }
+
+    .slick-slide {
+        margin: 0 50px;
+    }
+}
+
+section.homepageform {
+    .form-first-fold {
+        height: 100%;
+        background: imgUrl('homepage-form.png') right bottom $primary;
+    }
+
+    .form-second-fold {
+        height: 100%;
+        background: rgba(0, 173, 238, 0.1);
+
+        .form-control {
+            border: none;
+            border-bottom: 1px solid $white;
+            border-radius: 0;
+            outline: none;
+            box-shadow: none;
+            padding: 11px 8px;
+            width: 100%;
+            background: none;
+            font-family: $font-century;
+            color: $white;
+            font-weight: 200;
+
+            &::placeholder {
+                color: $white;
+            }
+        }
+    }
+}
+
+section.common-services {
+    .service-fold {
+        border-radius: 90px 90px 1px 1px;
+        position: relative;
+        overflow: hidden;
+        transition: margin-top 0.8s ease;
+
+        .overlay {
+            padding: 72px 0 289px;
+            background: linear-gradient(270deg, #041830 0%, rgba(4, 24, 48, 0.45) 57.67%, rgba(4, 24, 48, 0.00) 100%);
+        }
+    }
+
+    .service-fold-negative-margin {
+        margin-top: -400px;
+    }
+
+    .service-fold-1:hover+.service-fold-2,
+    .service-fold-2:hover+.service-fold-3,
+    .service-fold-3:hover+.service-fold-4,
+    .service-fold-4:hover+.service-fold-5,
+    .service-fold-5:hover+.service-fold-6,
+    .service-fold-6:hover+.service-fold-7,
+    .service-fold-7:hover+.service-fold-8,
+    .service-fold-8:hover+.service-fold-9,
+    .service-fold-9:hover+.service-fold-10,
+    .service-fold-10:hover+.service-fold-11 {
+        margin-top: -100px;
+    }
+}

@@ -5,6 +5,7 @@ $purple: #B083FB;
 $deep-blue: #041830;
 $blue: #0E2941;
 $light-blue: #F3FAFC;
+$light-blue-faded: #F3FAFC33;
 $black: #000000;
 $white: #ffffff;
 // $dark: #232323;
@@ -24,6 +25,7 @@ $theme-colors: map-merge(("primary": $primary,
             "blue": $blue,
             "deep-blue": $deep-blue,
             "light-blue": $light-blue,
+            "light-blue-faded": $light-blue-faded,
             "black": $black,
             "white": $white,
             // "dark": $dark,
@@ -130,6 +132,7 @@ $utilities: map-merge(("line-height":(property: line-height,
                     pill: $border-radius-pill )),
             "opacity": (property: opacity,
                 values: (0: 0,
+                    20: .20,
                     25: .25,
                     50: .5,
                     70: .70,
