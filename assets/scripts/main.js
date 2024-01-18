@@ -6,7 +6,7 @@ jQuery(function ($) {
             misc: function () {
                 AOS.init({ duration: 1500, });
 
-                $('#homepageProjectsSlider').slick({
+                $('.homepageProjectsSlider').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     variableWidth: true,
