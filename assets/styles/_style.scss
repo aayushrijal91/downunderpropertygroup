@@ -162,3 +162,28 @@ main.innerProjectsPage {
         }
     }
 }
+
+main.innerServicePage {
+    .number {
+        height: 48px;
+        width: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 12px;
+        background:rgba(53, 151, 175, 0.2);
+    }
+
+    section.introduction {}
+
+    section.about {
+        background: imgUrl('projectsListingIntroduction.jpg') center;
+        background-size: cover;
+    }
+
+    section.process {
+        .step {
+            background: rgba(105, 194, 219, 0.2);
+        }
+    }
+}
