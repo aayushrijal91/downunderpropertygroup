@@ -114,7 +114,7 @@ get_template_part('parts/section', 'banner');
     </section>
 
     <?php get_template_part('parts/section', 'journeybeginslider'); ?>
-    <?php get_template_part('parts/section', 'homepageform'); ?>
+    <?php get_template_part('parts/section', 'commonform'); ?>
 </main>
 
 <?php get_footer(); ?>

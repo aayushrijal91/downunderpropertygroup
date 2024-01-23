@@ -9,12 +9,13 @@ get_template_part('parts/section', 'banner');
 ?>
 
 <main class="projectsListingPage">
+    <?php $introduction = get_field('introduction'); ?>
     <div class="container">
         <section class="mx-auto col-xl-8 text-center">
-            <p class="text-primary fs-45 fw-500">Our commitment to quality...</p>
+            <p class="text-primary fs-45 fw-500"><?= $introduction['title'] ?></p>
 
-            <article class="font-century py-5 lh-1_67">
-                <p>Quality is the cornerstone of everything we do. From the meticulous selection of prime sites to the finest details in our craftsmanship, we spare no effort in delivering uncompromising quality. Every project is a testament to our commitment to excellence.</p>
+            <article class="font-century py-5 lh-1_67 description">
+                <?= $introduction['description'] ?>
             </article>
         </section>
     </div>
@@ -43,19 +44,18 @@ get_template_part('parts/section', 'banner');
         <?php get_template_part('parts/section', 'homeprojectsslider'); ?>
     </section>
 
-    <section class="introduction">
+    <section class="about">
+        <?php $about = get_field('about'); ?>
         <div class="container">
             <div class="col-xl-6 pt-9 pb-20">
-                <p class="text-primary fs-45 fw-500 lh-1">We don’t just build luxury homes, we build legacies.</p>
+                <p class="text-primary fs-45 fw-500 lh-1"><?= $about['title'] ?></p>
 
-                <div class="py-5 description font-century lh-1_5">
-                    <p>We understand that a luxury home is not just a dwelling; it's a legacy. Our homes are built to stand the test of time, leaving a lasting mark for generations to come.</p>
-                    <p>Discover the epitome of luxury living with DownUnder Property Group. Contact us to embark on a journey of architectural excellence, uncompromising quality, and the realisation of your most extravagant dreams.</p>
-                    <p>Your address is more than a location; it's an experience.</p>
-                </div>
+                <article class="py-5 description font-century lh-1_5">
+                    <?= $about['description'] ?>
+                </article>
 
                 <div class="d-flex">
-                    <a href="<?= get_field('contact_us_link', 'options')['url'] ?>" target="<?= get_field('contact_us_link', 'options')['target'] ?>" class="btn btn-purple rounded-1 text-white px-5 fs-14 fw-500">Enquire now</a>
+                    <a href="<?= $about['button']['url'] ?>" target="<?= $about['button']['target'] ?>" class="btn btn-purple rounded-1 text-white px-5 fs-14 fw-500"><?= $about['button']['title'] ?></a>
                 </div>
             </div>
 
@@ -66,7 +66,7 @@ get_template_part('parts/section', 'banner');
         <?php get_template_part('parts/section', 'commonservices'); ?>
     </div>
     <?php get_template_part('parts/section', 'journeybeginslider'); ?>
-    <?php get_template_part('parts/section', 'homepageform'); ?>
+    <?php get_template_part('parts/section', 'commonform'); ?>
 </main>
 
 <?php get_footer(); ?>

@@ -9,8 +9,8 @@
             <?php endif; ?>
 
             <?php if (isset($banner['next_page_link']) && !empty($banner['next_page_link']['url']) && !empty($banner['link_title'])) : ?>
-                <div class="col-auto">
-                    <a href="<?= $banner['next_page_link']['url'] ?>" target="<?= $banner['next_page_link']['target'] ?>" class="fs-25 fw-500 d-flex align-items-center gap-3">
+                <div class="col-3">
+                    <a href="<?= $banner['next_page_link']['url'] ?>" target="<?= $banner['next_page_link']['target'] ?>" class="fs-25 fw-500 d-flex align-items-center justify-content-end gap-3">
                         <span><?= $banner['link_title'] ?></span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="51" height="21" viewBox="0 0 51 21" fill="none">
                             <path d="M40.7861 1.91748L48.9263 10.0576C49.1216 10.2529 49.1216 10.5695 48.9263 10.7648L40.7861 18.9049" stroke="#B083FB" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" />

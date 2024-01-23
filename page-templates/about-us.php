@@ -17,7 +17,7 @@ get_template_part('parts/section', 'banner');
             <?php endif; ?>
             <p class="text-primary fs-45 fw-500"><?= $introduction['title'] ?></p>
 
-            <article class="font-century py-5 lh-1_67">
+            <article class="description font-century py-5 lh-1_67">
                 <?= $introduction['description'] ?>
             </article>
 
@@ -58,7 +58,7 @@ get_template_part('parts/section', 'banner');
         <section class="established py-9">
             <div class="row align-items-center">
                 <div class="col-4">
-                    <article class="fs-25 fw-500 text-primary text-center"><?= $about['description_1'] ?></article>
+                    <article class="description fs-25 fw-500 text-primary text-center"><?= $about['description_1'] ?></article>
                 </div>
 
                 <div class="col-4">
@@ -68,7 +68,7 @@ get_template_part('parts/section', 'banner');
                 </div>
 
                 <div class="col-4">
-                    <article class="font-century fw-300 text-center lh-1_67"><?= $about['description_2'] ?></article>
+                    <article class="description font-century fw-300 text-center lh-1_67"><?= $about['description_2'] ?></article>
                 </div>
             </div>
         </section>
@@ -83,7 +83,7 @@ get_template_part('parts/section', 'banner');
                         <p class="text-black fs-45 fw-500"><?= $vision['title'] ?></p>
                         <p class="fs-25 fw-300 lh-1_5 pt-5"><?= $vision['subtitle'] ?></p>
 
-                        <article class="fs-16 fw-300 lh-1_67 pt-4 font-century">
+                        <article class="description fs-16 fw-300 lh-1_67 pt-4 font-century">
                             <?= $vision['description'] ?>
                         </article>
 
@@ -183,7 +183,7 @@ get_template_part('parts/section', 'banner');
 
     <?php get_template_part('parts/section', 'whychooseus'); ?>
     <?php get_template_part('parts/section', 'journeybeginslider'); ?>
-    <?php get_template_part('parts/section', 'homepageform'); ?>
+    <?php get_template_part('parts/section', 'commonform'); ?>
 </main>
 
 <?php get_footer(); ?>

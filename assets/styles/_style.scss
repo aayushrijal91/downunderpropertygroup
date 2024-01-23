@@ -34,6 +34,11 @@ main.frontpage {
                 align-items: center;
             }
         }
+
+        .embed iframe {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     section.testimonials {
@@ -147,7 +152,7 @@ main.aboutUsPage {
 }
 
 main.projectsListingPage {
-    section.introduction {
+    section.about {
         background: imgUrl('projectsListingIntroduction.jpg') center;
         background-size: cover;
     }
@@ -170,11 +175,9 @@ main.innerServicePage {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 12px;
-        background:rgba(53, 151, 175, 0.2);
+        // margin-bottom: 12px;
+        background: rgba(53, 151, 175, 0.2);
     }
-
-    section.introduction {}
 
     section.about {
         background: imgUrl('projectsListingIntroduction.jpg') center;

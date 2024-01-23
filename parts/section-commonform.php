@@ -1,4 +1,4 @@
-<section class="homepageform d-flex">
+<section class="commonform d-flex">
     <div class="col-lg-6">
         <div class="form-first-fold d-flex justify-content-end">
             <div class="col-lg-9 px-8 py-9">

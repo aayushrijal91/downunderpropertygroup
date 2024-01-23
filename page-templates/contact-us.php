@@ -10,11 +10,12 @@ get_template_part('parts/section', 'banner');
 
 <main class="contactusPage">
     <div class="container">
+        <?php $introduction = get_field('introduction'); ?>
         <section class="introduction mx-auto col-xl-8 text-center">
-            <p class="text-primary fs-45 fw-500">Shaping Your Vision, Realising Your Dream.</p>
+            <p class="text-primary fs-45 fw-500"><?= $introduction['title'] ?></p>
 
             <article class="font-century py-5 lh-1_67">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <?= $introduction['description'] ?>
             </article>
         </section>
 
@@ -72,7 +73,7 @@ get_template_part('parts/section', 'banner');
         </div>
     </div>
 
-    <?php get_template_part('parts/section', 'homepageform'); ?>
+    <?php get_template_part('parts/section', 'commonform'); ?>
     <?php get_template_part('parts/section', 'journeybeginslider'); ?>
     <?php get_template_part('parts/section', 'whychooseus'); ?>
 </main>
