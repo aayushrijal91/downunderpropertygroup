@@ -1,12 +1,12 @@
 <section class="common-services">
-    <div class="container text-center pt-12 mb-7">
+    <div class="container text-center pt-6 pt-md-12 mb-7">
         <p class="text-primary fs-45 fw-500">Explore our services...</p>
         <p class="font-century fs-20 pt-4 pb-5 lh-1_5">Discover elegance redefined: your gateway to luxury living</p>
         <a href="<?= get_field('contact_us_link', 'options')['url'] ?>" target="<?= get_field('contact_us_link', 'options')['target'] ?>" class="btn btn-purple rounded-1 d-inline-flex text-white px-4 fs-14 fw-500">View all projects</a>
     </div>
 
     <div class="service-fold service-fold-1">
-        <img src="http://localhost/downunderpropertygroup/wp-content/uploads/2023/12/service-fold-1.jpg" alt="" class="position-absolute top-0 left-0 w-full h-full object-fit-cover">
+        <img src="http://localhost/downunderpropertygroup/wp-content/uploads/2023/12/service-fold-1.jpg" alt="" class="position-absolute top-0 left-0 w-100 h-100 object-fit-cover">
 
         <div class="overlay position-relative">
             <div class="container">
@@ -37,7 +37,7 @@
             <div class="container">
                 <div class="row justify-content-end">
                     <div class="col-lg-6 col-xxl-5">
-                        <p class="fs-35 fw-500">Site Acquisition &amp;<br /> Due Diligence</p>
+                        <p class="fs-35 fw-500">Strategic Development Advice & Feasibility Services</p>
                         <a href="#" class="d-inline-flex mt-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="84" height="85" viewBox="0 0 84 85" fill="none">
                                 <circle cx="42.1597" cy="42.4906" r="41.5659" fill="#B083FB" />
@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="row justify-content-end">
                     <div class="col-lg-6 col-xxl-5">
-                        <p class="fs-35 fw-500">Site Acquisition &amp;<br /> Due Diligence</p>
+                        <p class="fs-35 fw-500">Development Management</p>
                         <a href="#" class="d-inline-flex mt-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="84" height="85" viewBox="0 0 84 85" fill="none">
                                 <circle cx="42.1597" cy="42.4906" r="41.5659" fill="#B083FB" />
@@ -87,7 +87,7 @@
             <div class="container">
                 <div class="row justify-content-end">
                     <div class="col-lg-6 col-xxl-5">
-                        <p class="fs-35 fw-500">Site Acquisition &amp;<br /> Due Diligence</p>
+                        <p class="fs-35 fw-500">Luxury New Homes</p>
                         <a href="#" class="d-inline-flex mt-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="84" height="85" viewBox="0 0 84 85" fill="none">
                                 <circle cx="42.1597" cy="42.4906" r="41.5659" fill="#B083FB" />
@@ -112,7 +112,7 @@
             <div class="container">
                 <div class="row justify-content-end">
                     <div class="col-lg-6 col-xxl-5">
-                        <p class="fs-35 fw-500">Site Acquisition &amp;<br /> Due Diligence</p>
+                        <p class="fs-35 fw-500">Duplexes & Townhouses</p>
                         <a href="#" class="d-inline-flex mt-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="84" height="85" viewBox="0 0 84 85" fill="none">
                                 <circle cx="42.1597" cy="42.4906" r="41.5659" fill="#B083FB" />

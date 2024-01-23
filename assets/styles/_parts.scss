@@ -16,6 +16,10 @@ section.banner {
         border-radius: 70px;
         border: none;
         overflow: hidden;
+
+        @include media-breakpoint-down(md) {
+            border-radius: 30px;
+        }
     }
 }
 
@@ -158,6 +162,10 @@ section.common-services {
         position: relative;
         overflow: hidden;
         transition: margin-top 0.8s ease;
+
+        @include media-breakpoint-down(sm) {
+            border-radius: 50px 50px 1px 1px;
+        }
 
         .overlay {
             padding: 72px 0 289px;

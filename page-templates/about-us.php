@@ -21,33 +21,51 @@ get_template_part('parts/section', 'banner');
                 <?= $introduction['description'] ?>
             </article>
 
-            <div class="row justify-content-center gx-4 mt-6">
-                <div class="col-4">
-                    <div class="introduction-card h-100 w-100 px-4 pt-4 text-center d-flex flex-column align-items-center">
-                        <p class="text-capitalize fs-25">Leaders Of<br /> Luxury</p>
+            <div class="row justify-content-center gx-4 gy-2 mt-md-6">
+                <div class="col-12 col-md-4">
+                    <div class="introduction-card h-100 w-100 p-3 p-md-4 text-start text-md-center">
+                        <div class="row align-items-center">
+                            <div class="col-8 col-md-12 order-2 order-md-1">
+                                <p class="text-capitalize fs-25">Leaders Of<br class="d-none d-md-block" /> Luxury</p>
+                            </div>
 
-                        <div class="image d-flex align-items-center justify-content-center my-5">
-                            <img src="<?= home_url() ?>/wp-content/uploads/2023/12/leaders-of-luxury.png" alt="">
+                            <div class="col-4 col-md-12 order-1 order-md-2">
+                                <div class="image mt-md-5">
+                                    <img src="<?= home_url() ?>/wp-content/uploads/2023/12/leaders-of-luxury.png" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-4">
-                    <div class="introduction-card h-100 w-100 px-4 pt-4 text-center d-flex flex-column align-items-center">
-                        <p class="text-capitalize fs-25">Innovation & Quality</p>
+                <div class="col-12 col-md-4">
+                    <div class="introduction-card h-100 w-100 p-3 p-md-4 text-start text-md-center">
+                        <div class="row align-items-center">
+                            <div class="col-8 col-md-12 order-2 order-md-1">
+                                <p class="text-capitalize fs-25">Innovation & Quality</p>
+                            </div>
 
-                        <div class="image d-flex align-items-center justify-content-center my-5">
-                            <img src="<?= home_url() ?>/wp-content/uploads/2023/12/innovation-quality.png" alt="">
+                            <div class="col-4 col-md-12 order-1 order-md-2">
+                                <div class="image mt-md-5">
+                                    <img src="<?= home_url() ?>/wp-content/uploads/2023/12/innovation-quality.png" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-4">
-                    <div class="introduction-card h-100 w-100 px-4 pt-4 text-center d-flex flex-column align-items-center">
-                        <p class="text-capitalize fs-25">Outstanding Customer Service</p>
+                <div class="col-12 col-md-4">
+                    <div class="introduction-card h-100 w-100 px-4 py-3 py-md-4 text-start text-md-center">
+                        <div class="row align-items-center">
+                            <div class="col-8 col-md-12 order-2 order-md-1">
+                                <p class="text-capitalize fs-25">Outstanding Customer Service</p>
+                            </div>
 
-                        <div class="image d-flex align-items-center justify-content-center my-5">
-                            <img src="<?= home_url() ?>/wp-content/uploads/2023/12/outstanding-customer-service.png" alt="">
+                            <div class="col-4 col-md-12 order-1 order-md-2">
+                                <div class="image mt-md-5">
+                                    <img src="<?= home_url() ?>/wp-content/uploads/2023/12/outstanding-customer-service.png" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,18 +74,18 @@ get_template_part('parts/section', 'banner');
 
         <?php $about = get_field('about'); ?>
         <section class="established py-9">
-            <div class="row align-items-center">
-                <div class="col-4">
+            <div class="row align-items-center gy-5">
+                <div class="col-12 col-md-4">
                     <article class="description fs-25 fw-500 text-primary text-center"><?= $about['description_1'] ?></article>
                 </div>
 
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="established-image">
                         <img class="h-100 w-100 object-fit-cover" src="<?= $about['hero_image']['url'] ?>" alt="<?= $about['hero_image']['alt'] ?>">
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <article class="description font-century fw-300 text-center lh-1_67"><?= $about['description_2'] ?></article>
                 </div>
             </div>
@@ -79,20 +97,20 @@ get_template_part('parts/section', 'banner');
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6">
-                    <div class="px-5 bg-teal py-6">
+                    <div class="px-2 px-md-5 bg-teal py-5 py-md-6">
                         <p class="text-black fs-45 fw-500"><?= $vision['title'] ?></p>
-                        <p class="fs-25 fw-300 lh-1_5 pt-5"><?= $vision['subtitle'] ?></p>
+                        <p class="fs-25 fw-300 lh-1_5 pt-4 pt-md-5"><?= $vision['subtitle'] ?></p>
 
                         <article class="description fs-16 fw-300 lh-1_67 pt-4 font-century">
                             <?= $vision['description'] ?>
                         </article>
 
-                        <div class="row gx-3 py-6">
-                            <div class="col-auto">
+                        <div class="row g-3 py-5 py-md-6">
+                            <div class="col-9 col-md-auto">
                                 <a href="<?= get_field('contact_us_link', 'options')['url'] ?>" target="<?= get_field('contact_us_link', 'options')['target'] ?>" class="btn btn-purple rounded-1 text-white px-5 fs-14 fw-400">Contact Us</a>
                             </div>
 
-                            <div class="col-auto">
+                            <div class="col-9 col-md-auto">
                                 <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn border-2 border-white rounded-1 text-white px-5 fs-14 fw-500"><?= get_field('phone_number', 'options') ?></a>
                             </div>
                         </div>
@@ -107,7 +125,7 @@ get_template_part('parts/section', 'banner');
                     </div>
                 </div>
                 <div class="col-lg-5 py-5">
-                    <p class="fs-25 pb-5">Our Philosophy</p>
+                    <p class="fs-25 pb-4 pb-md-5">Our Philosophy</p>
 
                     <?php
                     if (have_rows('philosophy')) :
@@ -131,7 +149,7 @@ get_template_part('parts/section', 'banner');
         </div>
     </section>
 
-    <section class="story py-10">
+    <section class="story py-6 py-md-10">
         <?php $team = get_field('team'); ?>
         <div class="container">
             <div class="mx-auto col-xl-8 text-center">
@@ -146,13 +164,13 @@ get_template_part('parts/section', 'banner');
                 <p class="lh-1_5 fs-25 pb-3">Meet the masterminds of luxury:</p>
             </div>
 
-            <div class="row pt-5">
+            <div class="row gy-5 pt-5">
                 <?php if (have_rows('team')) :
                     while (have_rows('team')) : the_row();
                         if (have_rows('members')) :
                             while (have_rows('members')) : the_row();
                 ?>
-                                <div class="col-4">
+                                <div class="col-12 col-md-4">
                                     <div class="mastermind-card text-center">
                                         <div class="image">
                                             <?php if (isset(get_sub_field('image')['url'])) : ?>

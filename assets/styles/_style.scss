@@ -80,8 +80,10 @@ main.aboutUsPage {
         .introduction-card {
             background: rgba(53, 151, 175, 0.2);
 
-            .image {
-                height: 130px;
+            @include media-breakpoint-up(md) {
+                .image {
+                    height: 130px;
+                }
             }
         }
     }
@@ -94,6 +96,8 @@ main.aboutUsPage {
 
     section.vision {
         .vision-slider {
+            margin-bottom: 0;
+            
             .slick-track {
                 display: flex;
             }
@@ -161,7 +165,7 @@ main.projectsListingPage {
 main.innerProjectsPage {
     .portfolio {
         column-count: 2;
-        
+
         .project-card {
             .image {
                 height: 660px;
