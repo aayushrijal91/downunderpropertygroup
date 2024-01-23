@@ -2,13 +2,12 @@
     <div class="col-lg-6">
         <div class="form-first-fold d-flex justify-content-end">
             <div class="col-lg-9 px-8 py-9">
-                <p class="fs-45 fw-500 text-deep-blue">Your future home awaits you at a click of a button</p>
+                <p class="fs-45 fw-500 text-deep-blue"><?= get_field('form', 'options')['title']; ?></p>
                 <article class="description fs-20 text-deep-blue py-5">
-                    Contact us today to start your extraordinary property journey with DownUnder Property Group.
+                    <?= get_field('form', 'options')['description']; ?>
                 </article>
 
                 <a href="tel:<?= get_field('phone_number', 'options') ?>" target="<?= get_field('contact_us_link', 'options')['target'] ?>" class="btn btn-purple rounded-1 d-inline-flex text-white px-4 fs-14 fw-500"><?= get_field('phone_number', 'options') ?></a>
-
             </div>
         </div>
     </div>

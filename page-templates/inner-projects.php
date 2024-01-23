@@ -24,7 +24,7 @@ get_template_part('parts/section', 'banner');
         <?php $project_details = get_field('project_details'); ?>
         <div class="container">
             <article class="fs-20 d-flex justify-content-center gap-5">
-                <p>5 October 2023</p>
+                <p><?= get_the_date() ?></p>
                 <p><svg xmlns="http://www.w3.org/2000/svg" width="17" height="23" viewBox="0 0 17 23" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.65024 22.5193C8.65024 22.5193 16.8259 15.087 16.8259 8.3978C16.8259 6.22949 15.9645 4.14998 14.4313 2.61675C12.8981 1.08353 10.8186 0.222168 8.65024 0.222168C6.48193 0.222168 4.40242 1.08353 2.8692 2.61675C1.33597 4.14998 0.474609 6.22949 0.474609 8.3978C0.474609 15.087 8.65024 22.5193 8.65024 22.5193ZM12.366 8.39759C12.366 10.45 10.7022 12.1138 8.64979 12.1138C6.59739 12.1138 4.93359 10.45 4.93359 8.39759C4.93359 6.34519 6.59739 4.6814 8.64979 4.6814C10.7022 4.6814 12.366 6.34519 12.366 8.39759Z" fill="#69C2DB" />
                     </svg> <?= $project_details['location'] ?></p>
@@ -67,8 +67,7 @@ get_template_part('parts/section', 'banner');
 
             <div class="col-xl-10 mx-auto py-9">
                 <div class="portfolio">
-                    <?php
-                    foreach ($project_details['gallery'] as $index => $image) : ?>
+                    <?php foreach ($project_details['gallery'] as $index => $image) : ?>
                         <div>
                             <div class="project-card <?= $index > 0 ? 'pt-10' : '' ?>">
                                 <div class="image bg-light">

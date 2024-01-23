@@ -70,6 +70,14 @@ section.banner {
 
                     .slick-slide {
                         margin: 0 6px;
+                        height: 144px;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-position: center;
+                            object-fit: cover;
+                        }
                     }
                 }
             }
