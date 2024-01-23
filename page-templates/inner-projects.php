@@ -9,23 +9,25 @@ get_template_part('parts/section', 'banner');
 ?>
 
 <main class="innerProjectsPage">
+    <?php $introduction = get_field('introduction'); ?>
     <div class="container">
         <section class="introduction mx-auto col-xl-8 text-center pb-10">
-            <p class="text-primary fs-45 fw-500">Introduction to project</p>
+            <p class="text-primary fs-45 fw-500"><?= $introduction['title'] ?></p>
 
-            <article class="font-century pt-5 lh-1_67">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
+            <article class="font-century description pt-5 lh-1_67">
+                <?= $introduction['description'] ?>
             </article>
         </section>
     </div>
 
     <section class="bg-blue py-8">
+        <?php $project_details = get_field('project_details'); ?>
         <div class="container">
             <article class="fs-20 d-flex justify-content-center gap-5">
                 <p>5 October 2023</p>
                 <p><svg xmlns="http://www.w3.org/2000/svg" width="17" height="23" viewBox="0 0 17 23" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.65024 22.5193C8.65024 22.5193 16.8259 15.087 16.8259 8.3978C16.8259 6.22949 15.9645 4.14998 14.4313 2.61675C12.8981 1.08353 10.8186 0.222168 8.65024 0.222168C6.48193 0.222168 4.40242 1.08353 2.8692 2.61675C1.33597 4.14998 0.474609 6.22949 0.474609 8.3978C0.474609 15.087 8.65024 22.5193 8.65024 22.5193ZM12.366 8.39759C12.366 10.45 10.7022 12.1138 8.64979 12.1138C6.59739 12.1138 4.93359 10.45 4.93359 8.39759C4.93359 6.34519 6.59739 4.6814 8.64979 4.6814C10.7022 4.6814 12.366 6.34519 12.366 8.39759Z" fill="#69C2DB" />
-                    </svg> Parramatta, NSW</p>
+                    </svg> <?= $project_details['location'] ?></p>
             </article>
 
             <div class="row justify-content-center gx-3 pt-5">
@@ -36,7 +38,7 @@ get_template_part('parts/section', 'banner');
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M22.9731 15.1824C22.9731 19.6741 19.3318 23.3154 14.8401 23.3154C10.3483 23.3154 6.70703 19.6741 6.70703 15.1824C6.70703 10.6906 10.3483 7.04932 14.8401 7.04932C19.3318 7.04932 22.9731 10.6906 22.9731 15.1824ZM18.7962 15.1821C18.7962 17.37 17.0226 19.1436 14.8347 19.1436C12.6468 19.1436 10.8732 17.37 10.8732 15.1821C10.8732 12.9942 12.6468 11.2205 14.8347 11.2205C17.0226 11.2205 18.7962 12.9942 18.7962 15.1821Z" fill="#3597AF" />
                         </svg>
 
-                        Luxury Homes
+                        <?= $project_details['property_type'] ?>
                     </div>
                 </div>
 
@@ -47,7 +49,7 @@ get_template_part('parts/section', 'banner');
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M22.9731 15.1824C22.9731 19.6741 19.3318 23.3154 14.8401 23.3154C10.3483 23.3154 6.70703 19.6741 6.70703 15.1824C6.70703 10.6906 10.3483 7.04932 14.8401 7.04932C19.3318 7.04932 22.9731 10.6906 22.9731 15.1824ZM18.7962 15.1821C18.7962 17.37 17.0226 19.1436 14.8347 19.1436C12.6468 19.1436 10.8732 17.37 10.8732 15.1821C10.8732 12.9942 12.6468 11.2205 14.8347 11.2205C17.0226 11.2205 18.7962 12.9942 18.7962 15.1821Z" fill="#3597AF" />
                         </svg>
 
-                        Site Acquisition & Due Diligence
+                        <?= $project_details['service_type'] ?>
                     </div>
                 </div>
 
@@ -58,42 +60,32 @@ get_template_part('parts/section', 'banner');
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.09374 19.0075C9.3852 19.8704 10.9035 20.331 12.4568 20.331C14.5389 20.3286 16.535 19.5005 18.0072 18.0282C19.4795 16.556 20.3076 14.5598 20.31 12.4778C20.31 10.9245 19.8494 9.40619 18.9865 8.11473C18.1236 6.82327 16.8971 5.8167 15.4621 5.22231C14.0271 4.62791 12.4481 4.47239 10.9247 4.77541C9.40129 5.07843 8.00198 5.82638 6.90368 6.92468C5.80539 8.02298 5.05744 9.42229 4.75442 10.9457C4.4514 12.4691 4.60692 14.0481 5.20131 15.4831C5.79571 16.9181 6.80228 18.1446 8.09374 19.0075ZM11.6629 16.6364C11.8732 16.8468 12.1586 16.9651 12.4561 16.9651C12.7536 16.9651 13.0389 16.8468 13.2493 16.6364L16.6149 13.2707C16.8253 13.0604 16.9434 12.7751 16.9434 12.4776C16.9434 12.1801 16.8253 11.8948 16.6149 11.6844L13.2493 8.31871C13.0389 8.10839 12.7536 7.99023 12.4561 7.99023C12.1586 7.99023 11.8733 8.10839 11.6629 8.31871L8.29722 11.6844C8.0869 11.8948 7.96875 12.1801 7.96875 12.4776C7.96875 12.7751 8.0869 13.0604 8.29722 13.2707L11.6629 16.6364Z" fill="#F3FAFC" />
                         </svg>
 
-                        Value at $3,000,000
+                        Value at $<?= number_format($project_details['property_value']) ?>
                     </div>
                 </div>
             </div>
 
             <div class="col-xl-10 mx-auto py-9">
-                <div class="row gx-3">
-                    <div class="col-6">
-                        <div class="project-card">
-                            <div class="image bg-light"></div>
-                            <p class="fs-20 pt-4">Photo caption here</p>
+                <div class="portfolio">
+                    <?php
+                    foreach ($project_details['gallery'] as $index => $image) : ?>
+                        <div>
+                            <div class="project-card <?= $index > 0 ? 'pt-10' : '' ?>">
+                                <div class="image bg-light">
+                                    <img class="w-100 h-100 object-fit-cover" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+                                </div>
+                                <p class="fs-20 pt-4"><?= $image['alt'] ?></p>
+                            </div>
                         </div>
-
-                        <div class="project-card mt-10">
-                            <div class="image bg-light"></div>
-                            <p class="fs-20 pt-4">Photo caption here</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="project-card mt-15">
-                            <div class="image bg-light"></div>
-                            <p class="fs-20 pt-4">Photo caption here</p>
-                        </div>
-
-                        <div class="project-card mt-10">
-                            <div class="image bg-light"></div>
-                            <p class="fs-20 pt-4">Photo caption here</p>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
 
             <div class="project-card">
-                <p class="fs-20 pb-4">Photo caption here</p>
-                <div class="image"></div>
+                <p class="fs-20 pb-4"><?= get_field('hero_image')['alt'] ?></p>
+                <div class="image">
+                    <img class="h-100 w-100" src="<?= get_field('hero_image')['url'] ?>" alt="<?= get_field('hero_image')['alt'] ?>">
+                </div>
             </div>
         </div>
     </section>

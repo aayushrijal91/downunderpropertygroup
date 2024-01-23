@@ -159,11 +159,15 @@ main.projectsListingPage {
 }
 
 main.innerProjectsPage {
-    .project-card {
-        .image {
-            height: 660px;
-            width: 100%;
-            background: $light;
+    .portfolio {
+        column-count: 2;
+        
+        .project-card {
+            .image {
+                height: 660px;
+                width: 100%;
+                background: $light;
+            }
         }
     }
 }
