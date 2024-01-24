@@ -1,7 +1,7 @@
 <section class="commonform row gx-0">
     <div class="col-lg-6">
         <div class="form-first-fold d-flex justify-content-end">
-            <div class="col-xl-9 px-3 px-md-8 px-lg-4 px-xl-8 pt-6 pb-20 py-md-9">
+            <div class="col-xxl-9 px-3 px-md-8 px-lg-4 px-xxl-8 pt-6 pb-20 py-md-9">
                 <p class="fs-45 fw-500 text-deep-blue"><?= get_field('form', 'options')['title']; ?></p>
                 <article class="description fs-20 text-deep-blue py-4 py-md-5">
                     <?= get_field('form', 'options')['description']; ?>
@@ -14,7 +14,7 @@
 
     <div class="col-lg-6">
         <div class="form-second-fold">
-            <div class="col-xl-11 px-3 px-md-8 px-lg-4 px-xl-8 py-5 py-md-9">
+            <div class="col-xxl-11 px-3 px-md-8 px-lg-4 px-xxl-8 py-5 py-md-9">
                 <p class="fs-25 fw-500">Fill in your details and we'll get<br /> back to you ASAP!</p>
 
                 <form action="" class="pt-4">

@@ -11,7 +11,7 @@ get_template_part('parts/section', 'banner');
 <main class="innerProjectsPage">
     <?php $introduction = get_field('introduction'); ?>
     <div class="container">
-        <section class="introduction mx-auto col-xl-8 text-center pb-10">
+        <section class="introduction mx-auto col-xl-8 text-center pb-5 pb-md-10">
             <p class="text-primary fs-45 fw-500"><?= $introduction['title'] ?></p>
 
             <article class="font-century description pt-5 lh-1_67">
@@ -20,7 +20,7 @@ get_template_part('parts/section', 'banner');
         </section>
     </div>
 
-    <section class="bg-blue py-8">
+    <section class="bg-blue py-6 py-md-8">
         <?php $project_details = get_field('project_details'); ?>
         <div class="container">
             <article class="fs-20 d-flex justify-content-center gap-5">
@@ -30,7 +30,7 @@ get_template_part('parts/section', 'banner');
                     </svg> <?= $project_details['location'] ?></p>
             </article>
 
-            <div class="row justify-content-center gx-3 pt-5">
+            <div class="row justify-content-center gx-3 pt-5 gy-3">
                 <div class="col-auto">
                     <div class="rounded-pill border border-2 d-flex gap-2 align-items-center border-primary p-2 text-primary fs-20">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,11 +65,11 @@ get_template_part('parts/section', 'banner');
                 </div>
             </div>
 
-            <div class="col-xl-10 mx-auto py-9">
+            <div class="col-xl-10 mx-auto py-6 py-md-9">
                 <div class="portfolio">
                     <?php foreach ($project_details['gallery'] as $index => $image) : ?>
                         <div>
-                            <div class="project-card <?= $index > 0 ? 'pt-10' : '' ?>">
+                            <div class="project-card <?= $index > 0 ? 'pt-5 pt-md-10' : '' ?>">
                                 <div class="image bg-light">
                                     <img class="w-100 h-100 object-fit-cover" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
                                 </div>
@@ -83,13 +83,13 @@ get_template_part('parts/section', 'banner');
             <div class="project-card">
                 <p class="fs-20 pb-4"><?= get_field('hero_image')['alt'] ?></p>
                 <div class="image">
-                    <img class="h-100 w-100" src="<?= get_field('hero_image')['url'] ?>" alt="<?= get_field('hero_image')['alt'] ?>">
+                    <img class="h-100 w-100 object-fit-cover" src="<?= get_field('hero_image')['url'] ?>" alt="<?= get_field('hero_image')['alt'] ?>">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-10">
+    <section class="py-6 py-md-10">
         <div class="container">
             <div class="row justify-content-between align-items-center mb-8">
                 <div class="col-6">

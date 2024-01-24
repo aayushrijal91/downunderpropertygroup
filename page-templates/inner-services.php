@@ -58,14 +58,14 @@ get_template_part('parts/section', 'banner');
 
     <?php $strategy = get_field('strategy'); ?>
     <div class="container mt-5 mt-md-10">
-        <div class="row justify-content-between gx-xl-5 gy-5">
+        <div class="row justify-content-center justify-content-lg-between gx-xl-5 gy-5">
             <div class="col-12 col-md-6">
                 <img src="<?= $strategy['image']['url'] ?>" alt="<?= $strategy['image']['alt'] ?>">
             </div>
 
             <!-- design 1 -->
             <?php if ($strategy['strategy_design'] == 'Design 1') : ?>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-lg-6 col-xxl-5">
                     <p class="font-century text-center text-md-start lh-1_5 fs-25 pb-3"><?= $strategy['subtitle'] ?></p>
                     <p class="text-primary text-center text-md-start fs-45 fw-500"><?= $strategy['title'] ?></p>
 
@@ -97,7 +97,7 @@ get_template_part('parts/section', 'banner');
 
             <!-- design 2 -->
             <?php if ($strategy['strategy_design'] == 'Design 2') : ?>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-lg-6">
                     <p class="font-century lh-1_5 fs-25 pb-3"><?= $strategy['subtitle'] ?></p>
                     <p class="text-primary fs-45 fw-500"><?= $strategy['title'] ?></p>
 
@@ -137,7 +137,7 @@ get_template_part('parts/section', 'banner');
 
             <!-- design 3 -->
             <?php if ($strategy['strategy_design'] == 'Design 3') : ?>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-xl-6 pb-md-7 pb-xl-10">
                     <p class="font-century lh-1_5 fs-25 pb-3"><?= $strategy['subtitle'] ?></p>
                     <p class="text-primary fs-45 fw-500"><?= $strategy['title'] ?></p>
 
@@ -179,7 +179,7 @@ get_template_part('parts/section', 'banner');
     ?>
         <div class="container py-6 pt-md-10">
             <section class="process bg-blue py-5 py-md-6">
-                <div class="col-11 col-xl-10 mx-auto">
+                <div class="col-11 col-xxl-10 mx-auto">
                     <div class="row justify-content-center justify-content-md-between align-items-center gy-4">
                         <div class="col-12 col-md-6">
                             <p class="text-primary fs-25 font-bold text-center text-md-start"><?= $content['title'] ?></p>
@@ -228,15 +228,15 @@ get_template_part('parts/section', 'banner');
     <?php if (get_field('display_investment')) :
         $investment = get_field('investment'); ?>
 
-        <div class="container py-6 py-md-10">
+        <div class="container py-6 pb-md-10">
             <div class="bg-primary px-3 px-md-5 py-5 py-md-6">
                 <p class="fs-25"><?= $investment['subtitle'] ?></p>
 
                 <div class="row justify-content-around align-items-center pt-4 gy-5">
-                    <div class="col-12 col-md-5">
+                    <div class="col-12 col-lg-6 col-xl-5">
                         <img src="<?= $investment['image']['url'] ?>" alt="<?= $investment['image']['alt'] ?>">
                     </div>
-                    <div class="col-12 col-md-5">
+                    <div class="col-12 col-lg-6 col-xl-5">
                         <p class="fs-45 text-capitalize fw-500"><?= $investment['title'] ?></p>
 
                         <article class="description font-century lh-1_67 py-4 py-md-5">

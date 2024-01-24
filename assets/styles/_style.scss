@@ -186,11 +186,19 @@ main.innerProjectsPage {
     .portfolio {
         column-count: 2;
 
-        .project-card {
-            .image {
-                height: 660px;
-                width: 100%;
-                background: $light;
+        @include media-breakpoint-down(sm) {
+            column-count: 1;
+        }
+    }
+
+    .project-card {
+        .image {
+            height: 660px;
+            width: 100%;
+            background: $light;
+
+            @include media-breakpoint-down(sm) {
+                height: 500px;
             }
         }
     }
