@@ -19,8 +19,8 @@ get_template_part('parts/section', 'banner');
             </article>
         </section>
 
-        <div class="row justify-content-center gx-4 gy-2 mt-md-6 mb-7 mb-md-10">
-            <div class="col-12 col-md-4">
+        <div class="row justify-content-center gx-4 gy-2 mt-lg-6 mb-7 mb-lg-10">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="h-100 w-100 p-4 text-center d-flex flex-column align-items-center bg-blue">
                     <div class="d-flex align-items-center justify-content-center mb-5">
                         <svg width="64" height="59" viewBox="0 0 64 59" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@ get_template_part('parts/section', 'banner');
                 </div>
             </div>
 
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="h-100 w-100 p-4 text-center d-flex flex-column align-items-center bg-blue">
                     <div class="d-flex align-items-center justify-content-center mb-5">
                         <svg width="73" height="71" viewBox="0 0 73 71" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +52,7 @@ get_template_part('parts/section', 'banner');
                 </div>
             </div>
 
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="h-100 w-100 p-4 text-center d-flex flex-column align-items-center bg-blue">
                     <div class="d-flex align-items-center justify-content-center mb-5">
                         <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">

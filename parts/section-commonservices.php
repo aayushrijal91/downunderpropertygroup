@@ -1,5 +1,5 @@
 <section class="common-services">
-    <div class="container text-center pt-6 pt-md-10 pt-lg-12 mb-7">
+    <div class="container text-center pt-6 pt-lg-10 pt-lg-12 mb-7">
         <p class="text-primary fs-45 fw-500">Explore our services...</p>
         <p class="font-century fs-20 pt-4 pb-5 lh-1_5">Discover elegance redefined: your gateway to luxury living</p>
         <a href="<?= get_field('contact_us_link', 'options')['url'] ?>" target="<?= get_field('contact_us_link', 'options')['target'] ?>" class="btn btn-purple rounded-1 d-inline-flex text-white px-4 fs-14 fw-500">View all projects</a>

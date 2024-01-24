@@ -21,7 +21,7 @@ get_template_part('parts/section', 'banner');
                 <?= $introduction['description'] ?>
             </article>
 
-            <div class="row justify-content-center gx-4 gy-2 mt-md-6">
+            <div class="row justify-content-center gx-2 gx-lg-4 gy-2 mt-md-4 mt-lg-6">
                 <div class="col-12 col-md-4">
                     <div class="introduction-card h-100 w-100 p-3 p-md-4 text-start text-md-center">
                         <div class="row align-items-center">
@@ -74,18 +74,18 @@ get_template_part('parts/section', 'banner');
 
         <?php $about = get_field('about'); ?>
         <section class="established py-9">
-            <div class="row align-items-center gy-5">
-                <div class="col-12 col-md-4">
+            <div class="row justify-content-center align-items-center gy-5">
+                <div class="col-12 col-md-8 col-lg-4">
                     <article class="description fs-25 fw-500 text-primary text-center"><?= $about['description_1'] ?></article>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-lg-4">
                     <div class="established-image">
                         <img class="h-100 w-100 object-fit-cover" src="<?= $about['hero_image']['url'] ?>" alt="<?= $about['hero_image']['alt'] ?>">
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-8 col-lg-4">
                     <article class="description font-century fw-300 text-center lh-1_67"><?= $about['description_2'] ?></article>
                 </div>
             </div>
@@ -149,7 +149,7 @@ get_template_part('parts/section', 'banner');
         </div>
     </section>
 
-    <section class="story py-6 py-md-10">
+    <section class="story py-6 py-md-8 py-lg-10">
         <?php $team = get_field('team'); ?>
         <div class="container">
             <div class="mx-auto col-xl-8 text-center">
@@ -164,7 +164,7 @@ get_template_part('parts/section', 'banner');
                 <p class="lh-1_5 fs-25 pb-3">Meet the masterminds of luxury:</p>
             </div>
 
-            <div class="row gy-5 pt-5">
+            <div class="row gx-3 gy-5 pt-5">
                 <?php if (have_rows('team')) :
                     while (have_rows('team')) : the_row();
                         if (have_rows('members')) :
