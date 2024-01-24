@@ -15,9 +15,9 @@ get_template_part('parts/section', 'nav');
         <p class="fs-65 fw-500 text-capitalize lh-1 pt-4"><?= $banner['title'] ?></p>
     </div>
 
-    <hr class="my-5" />
+    <hr class="my-4 my-md-5" />
 
-    <div class="services pb-5">
+    <div class="services pb-5 d-none d-md-block">
         <div class="container">
             <div class="row">
                 <div class="col-5">
@@ -84,21 +84,21 @@ get_template_part('parts/section', 'nav');
 
 <main class="frontpage mt-0">
     <?php $introduction = get_field('introduction'); ?>
-    <div class="container py-10">
+    <div class="container py-5 py-md-10">
         <div class="mx-auto col-xl-7 text-center">
             <p class="text-primary fs-45 fw-500"><?= $introduction['title'] ?></p>
-            <p class="pt-5 fs-25"><?= $introduction['subtitle'] ?></p>
+            <p class="pt-4 pt-md-5 fs-25"><?= $introduction['subtitle'] ?></p>
 
-            <article class="description font-century py-5 lh-1_67">
+            <article class="description font-century py-4 py-md-5 lh-1_67">
                 <?= $introduction['description'] ?>
             </article>
 
-            <div class="col-auto row justify-content-center gx-3">
-                <div class="col-auto">
+            <div class="col-auto row justify-content-center gx-3 gy-2">
+                <div class="col-8 col-md-auto">
                     <a href="<?= $introduction['button']['url'] ?>" target="<?= $introduction['button']['target'] ?>" class="btn btn-purple rounded-1 text-white px-5 fs-14 fw-500"><?= $introduction['button']['title'] ?></a>
                 </div>
 
-                <div class="col-auto">
+                <div class="col-8 col-md-auto">
                     <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn border-2 border-purple rounded-1 text-purple px-5 fs-14 fw-500"><?= get_field('phone_number', 'options') ?></a>
                 </div>
             </div>
@@ -118,7 +118,7 @@ get_template_part('parts/section', 'nav');
         </div>
     </section>
 
-    <section class="py-10">
+    <section class="py-6 py-md-10">
         <?php $projects = get_field('projects'); ?>
         <div class="container">
             <div class="col-xl-10 text-center mx-auto">
@@ -145,7 +145,7 @@ get_template_part('parts/section', 'nav');
         <?php $about = get_field('about'); ?>
         <div class="container">
             <div class="row gy-4 gx-3">
-                <div class="col-5">
+                <div class="col-12 col-md-5">
                     <div class="bg-white p-4">
                         <p class="fs-45 text-teal fw-500"><?= $about['title'] ?></p>
 
@@ -157,7 +157,7 @@ get_template_part('parts/section', 'nav');
                     </div>
                 </div>
 
-                <div class="col-7">
+                <div class="col-12 col-md-7">
                     <div class="embed h-100">
                         <?= $about['youtube'] ?>
                     </div>
@@ -171,7 +171,7 @@ get_template_part('parts/section', 'nav');
                             $count = 1;
                             while (have_rows('list')) : the_row();
                 ?>
-                                <div class="col-4">
+                                <div class="col-12 col-md-4">
                                     <div class="cta-box <?= $count % 2 ? 'bg-teal' : 'bg-primary' ?> h-100">
                                         <p class="fs-45 text-deep-blue fw-500 text-capitalize"><?= get_sub_field('title') ?></p>
 
@@ -205,22 +205,22 @@ get_template_part('parts/section', 'nav');
         <div class="container text-center">
             <p class="text-primary fs-45 fw-500"><?= $testimonials['title'] ?></p>
 
-            <article class="description col-lg-8 mx-auto font-century fw-200 text-light-blue pt-4 pb-5 lh-1_5">
+            <article class="description col-lg-8 mx-auto font-century fw-200 text-light-blue py-4 pb-md-5 lh-1_5">
                 <?= $testimonials['description'] ?>
             </article>
 
-            <div class="row justify-content-center gx-3">
-                <div class="col-auto">
-                    <a href="<?= $testimonials['button']['url'] ?>" target="<?= $testimonials['button']['target'] ?>" class="btn btn-purple rounded-1 d-inline-flex text-white px-5 fs-14 fw-500"><?= $testimonials['button']['title'] ?></a>
+            <div class="row justify-content-center gx-3 gy-2">
+                <div class="col-8 col-md-auto">
+                    <a href="<?= $testimonials['button']['url'] ?>" target="<?= $testimonials['button']['target'] ?>" class="btn btn-purple rounded-1 d-flex text-white px-5 fs-14 fw-500 w-full"><?= $testimonials['button']['title'] ?></a>
                 </div>
 
-                <div class="col-auto">
+                <div class="col-8 col-md-auto">
                     <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn border-2 border-purple rounded-1 text-purple px-5 fs-14 fw-500"><?= get_field('phone_number', 'options') ?></a>
                 </div>
             </div>
         </div>
 
-        <div id="testimonialSlider" class="py-7">
+        <div id="testimonialSlider" class="py-6 py-md-7">
             <?php if (have_rows('testimonials_list')) :
                 while (have_rows('testimonials_list')) : the_row();
             ?>

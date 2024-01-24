@@ -16,6 +16,14 @@ jQuery(function ($) {
                     initialSlide: 0,
                     draggable: false,
                     focusOnSelect: true,
+                    responsive: [
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                draggable: true,
+                            }
+                        }
+                    ]
                 });
 
                 $('.innerSlider').slick({
@@ -47,6 +55,16 @@ jQuery(function ($) {
                     autoplay: true,
                     autoplaySpeed: 3000,
                     speed: 1000,
+                    responsive: [
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                centerPadding: "20px"
+                            }
+                        }
+                    ]
                 })
 
                 $("#gallerySlider").slick({
@@ -58,6 +76,16 @@ jQuery(function ($) {
                     autoplay: true,
                     autoplaySpeed: 2000,
                     speed: 1000,
+                    responsive: [
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                centerPadding: "20px"
+                            }
+                        }
+                    ]
                 });
 
                 $('.vision-slider').slick({

@@ -14,15 +14,15 @@ get_template_part('parts/section', 'banner');
         <section class="mx-auto col-xl-8 text-center">
             <p class="text-primary fs-45 fw-500"><?= $introduction['title'] ?></p>
 
-            <article class="font-century py-5 lh-1_67 description">
+            <article class="font-century py-4 py-md-5 lh-1_67 description">
                 <?= $introduction['description'] ?>
             </article>
         </section>
     </div>
 
-    <section class="pt-8">
+    <section class="pt-5 pt-md-8">
         <div class="container">
-            <p class="text-capitalize fs-25 font-bold mb-8">More Projects You'll Like</p>
+            <p class="text-capitalize fs-25 font-bold mb-5 mb-md-8">More Projects You'll Like</p>
         </div>
 
         <?php get_template_part('parts/section', 'homeprojectsslider'); ?>
@@ -47,7 +47,7 @@ get_template_part('parts/section', 'banner');
     <section class="about">
         <?php $about = get_field('about'); ?>
         <div class="container">
-            <div class="col-xl-6 pt-9 pb-20">
+            <div class="col-xl-6 pt-6 pt-md-9 pb-10 pb-md-20">
                 <p class="text-primary fs-45 fw-500 lh-1"><?= $about['title'] ?></p>
 
                 <article class="py-5 description font-century lh-1_5">

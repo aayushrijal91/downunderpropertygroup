@@ -26,7 +26,7 @@ $the_query = new WP_Query($args);
                     <div class="inner-left">
                         <p class="text-primary">Project finalised <?= get_the_date() ?></p>
 
-                        <a href="<?= get_the_permalink() ?>" class="fs-25 fw-500 py-3 d-flex align-items-center text-white mt-3 mb-5">
+                        <a href="<?= get_the_permalink() ?>" class="fs-25 fw-500 py-3 d-flex gap-3 align-items-center text-white mt-3 mb-5">
                             <span><?= get_the_title() ?></span>
                             <span>
                                 <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">

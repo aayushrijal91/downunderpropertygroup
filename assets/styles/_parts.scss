@@ -38,6 +38,10 @@ section.banner {
 
         &.slick-current.slick-center {
             width: 988px;
+
+            @include media-breakpoint-down(sm) {
+                width: 320px;
+            }
         }
 
         .inner {
@@ -54,6 +58,11 @@ section.banner {
             .inner-left {
                 padding: 0 25px 0 50px;
                 width: 370px;
+
+                @include media-breakpoint-down(sm) {
+                    width: 320px;
+                    padding: 0 25px;
+                }
             }
 
             .inner-right {

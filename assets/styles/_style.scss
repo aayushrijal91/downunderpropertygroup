@@ -3,6 +3,10 @@ section.homeBanner {
     background-size: cover;
     padding-top: 490px;
 
+    @include media-breakpoint-down(sm) {
+        padding-top: 326px;
+    }
+
     .services {
         background: linear-gradient(0deg, rgba(4, 24, 48, 0.72) 44.39%, rgba(4, 24, 48, 0.00) 100%);
     }
@@ -25,6 +29,10 @@ main.frontpage {
         background: rgba(0, 173, 238, 0.1);
         padding: 168px 0 0;
 
+        @include media-breakpoint-down(md) {
+            padding: 80px 0 0;
+        }
+
         .cta-box {
             padding: 32px;
 
@@ -44,6 +52,10 @@ main.frontpage {
     section.testimonials {
         padding-top: 136px;
 
+        @include media-breakpoint-down(sm) {
+            padding-top: 64px;
+        }
+
         #testimonialSlider {
             .slick-track {
                 display: flex;
@@ -54,6 +66,10 @@ main.frontpage {
                 border-right: 1.5px solid $primary;
                 padding: 20px 80px;
                 text-align: center;
+
+                @include media-breakpoint-down(sm) {
+                    padding: 20px;
+                }
             }
         }
     }
