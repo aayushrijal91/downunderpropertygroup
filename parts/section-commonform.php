@@ -1,9 +1,9 @@
-<section class="commonform d-flex">
+<section class="commonform row gx-0">
     <div class="col-lg-6">
         <div class="form-first-fold d-flex justify-content-end">
-            <div class="col-lg-9 px-8 py-9">
+            <div class="col-lg-9 px-3 px-md-8 pt-6 pb-20 py-md-9">
                 <p class="fs-45 fw-500 text-deep-blue"><?= get_field('form', 'options')['title']; ?></p>
-                <article class="description fs-20 text-deep-blue py-5">
+                <article class="description fs-20 text-deep-blue py-4 py-md-5">
                     <?= get_field('form', 'options')['description']; ?>
                 </article>
 
@@ -14,24 +14,24 @@
 
     <div class="col-lg-6">
         <div class="form-second-fold">
-            <div class="col-lg-11 px-8 py-9">
+            <div class="col-lg-11 px-3 px-md-8 py-5 py-md-9">
                 <p class="fs-25 fw-500">Fill in your details and we'll get<br /> back to you ASAP!</p>
 
                 <form action="" class="pt-4">
                     <div class="row gy-4">
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <input type="text" class="form-control" placeholder="Your name*" />
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <input type="tel" class="form-control" placeholder="Contact no.*" />
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <input type="email" class="form-control" placeholder="Email address*" />
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <select name="" id="" class="form-control form-select">
                                 <option>Select service of interest</option>
                                 <option>1</option>
@@ -62,7 +62,6 @@
                         </div>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>

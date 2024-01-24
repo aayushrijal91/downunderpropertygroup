@@ -31,7 +31,7 @@
     </div>
 
     <div class="service-fold service-fold-negative-margin service-fold-2">
-        <img src="http://localhost/downunderpropertygroup/wp-content/uploads/2023/12/service-fold-2.jpg" alt="" class="position-absolute top-0 left-0 w-full h-full object-fit-cover">
+        <img src="http://localhost/downunderpropertygroup/wp-content/uploads/2023/12/service-fold-2.jpg" alt="" class="position-absolute top-0 left-0 w-100 h-100 object-fit-cover">
 
         <div class="overlay position-relative">
             <div class="container">
@@ -56,7 +56,7 @@
     </div>
 
     <div class="service-fold service-fold-negative-margin service-fold-3">
-        <img src="http://localhost/downunderpropertygroup/wp-content/uploads/2023/12/service-fold-3.jpg" alt="" class="position-absolute top-0 left-0 w-full h-full object-fit-cover">
+        <img src="http://localhost/downunderpropertygroup/wp-content/uploads/2023/12/service-fold-3.jpg" alt="" class="position-absolute top-0 left-0 w-100 h-100 object-fit-cover">
 
         <div class="overlay position-relative">
             <div class="container">
@@ -81,7 +81,7 @@
     </div>
 
     <div class="service-fold service-fold-negative-margin service-fold-4">
-        <img src="http://localhost/downunderpropertygroup/wp-content/uploads/2023/12/service-fold-4.jpg" alt="" class="position-absolute top-0 left-0 w-full h-full object-fit-cover">
+        <img src="http://localhost/downunderpropertygroup/wp-content/uploads/2023/12/service-fold-4.jpg" alt="" class="position-absolute top-0 left-0 w-100 h-100 object-fit-cover">
 
         <div class="overlay position-relative">
             <div class="container">
@@ -106,7 +106,7 @@
     </div>
 
     <div class="service-fold service-fold-negative-margin service-fold-5">
-        <img src="http://localhost/downunderpropertygroup/wp-content/uploads/2023/12/service-fold-5.jpg" alt="" class="position-absolute top-0 left-0 w-full h-full object-fit-cover">
+        <img src="http://localhost/downunderpropertygroup/wp-content/uploads/2023/12/service-fold-5.jpg" alt="" class="position-absolute top-0 left-0 w-100 h-100 object-fit-cover">
 
         <div class="overlay position-relative">
             <div class="container">
