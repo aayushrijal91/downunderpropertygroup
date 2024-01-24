@@ -75,17 +75,17 @@ get_template_part('parts/section', 'banner');
         <?php $about = get_field('about'); ?>
         <section class="established py-9">
             <div class="row justify-content-center align-items-center gy-5">
-                <div class="col-12 col-md-8 col-lg-4">
+                <div class="col-12 col-md-8 col-xl-4">
                     <article class="description fs-25 fw-500 text-primary text-center"><?= $about['description_1'] ?></article>
                 </div>
 
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-xl-4">
                     <div class="established-image">
                         <img class="h-100 w-100 object-fit-cover" src="<?= $about['hero_image']['url'] ?>" alt="<?= $about['hero_image']['alt'] ?>">
                     </div>
                 </div>
 
-                <div class="col-12 col-md-8 col-lg-4">
+                <div class="col-12 col-md-8 col-xl-4">
                     <article class="description font-century fw-300 text-center lh-1_67"><?= $about['description_2'] ?></article>
                 </div>
             </div>
@@ -97,7 +97,7 @@ get_template_part('parts/section', 'banner');
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6">
-                    <div class="px-2 px-md-5 bg-teal py-5 py-md-6">
+                    <div class="px-2 px-md-5 px-lg-3 px-xl-5 bg-teal py-5 py-md-6">
                         <p class="text-black fs-45 fw-500"><?= $vision['title'] ?></p>
                         <p class="fs-25 fw-300 lh-1_5 pt-4 pt-md-5"><?= $vision['subtitle'] ?></p>
 
@@ -124,7 +124,7 @@ get_template_part('parts/section', 'banner');
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 py-5">
+                <div class="col-lg-6 col-xl-5 py-5">
                     <p class="fs-25 pb-4 pb-md-5">Our Philosophy</p>
 
                     <?php
@@ -149,7 +149,7 @@ get_template_part('parts/section', 'banner');
         </div>
     </section>
 
-    <section class="story py-6 py-md-8 py-lg-10">
+    <section class="story py-6 py-md-8 py-xl-10">
         <?php $team = get_field('team'); ?>
         <div class="container">
             <div class="mx-auto col-xl-8 text-center">

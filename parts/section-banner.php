@@ -3,13 +3,13 @@
     <div class="container">
         <div class="row justify-content-between">
             <?php if (isset($banner['title'])) : ?>
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-8">
                     <h1 class="fs-45"><?= $banner['title'] ?></h1>
                 </div>
             <?php endif; ?>
 
             <?php if (isset($banner['next_page_link']) && !empty($banner['next_page_link']['url']) && !empty($banner['link_title'])) : ?>
-                <div class="col-md-4 col-lg-3 d-none d-md-block">
+                <div class="col-md-4 col-xl-3 d-none d-md-block">
                     <a href="<?= $banner['next_page_link']['url'] ?>" target="<?= $banner['next_page_link']['target'] ?>" class="fs-25 fw-500 d-flex align-items-center justify-content-end gap-3">
                         <span><?= $banner['link_title'] ?></span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="51" height="21" viewBox="0 0 51 21" fill="none">
@@ -25,7 +25,7 @@
     </div>
 
     <?php if (isset($banner['hero_image']['url'])) : ?>
-        <div class="container-fluid px-lg-5 py-5 py-lg-7">
+        <div class="container-fluid px-xl-5 py-5 py-lg-7">
             <div class="heroImage">
                 <img class="h-100 w-100 object-fit-cover" src="<?= $banner['hero_image']['url'] ?>" alt="<?= $banner['hero_image']['alt'] ?>">
             </div>

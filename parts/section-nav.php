@@ -7,7 +7,7 @@
                 </a>
             </div>
 
-            <div class="col-auto d-none d-lg-block">
+            <div class="col-auto d-none d-xl-block">
                 <ul class="d-flex gap-5">
                     <li><a href="<?= home_url() ?>/about-us" class="text-white ">Our Story</a></li>
                     <li><a href="#" class="text-white ">Our Services</a></li>

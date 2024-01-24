@@ -1,8 +1,8 @@
 <?php $why_us = get_field('why_choose_us', 'options'); ?>
-<section class="bg-blue py-5 py-md-7 py-lg-10">
+<section class="bg-blue py-5 py-md-7 py-xl-10">
     <div class="container">
         <div class="row g-2 gy-md-4 gx-xl-4">
-            <div class="col-12 col-lg-6 px-lg-5 py-4">
+            <div class="col-12 col-lg-6 px-xl-5 py-4">
                 <p class="fs-45 text-primary fw-500"><?= $why_us['title'] ?></p>
 
                 <p class="font-century py-4">
