@@ -57,6 +57,14 @@ jQuery(function ($) {
                     speed: 1000,
                     responsive: [
                         {
+                            breakpoint: 900,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                                centerPadding: "20px"
+                            }
+                        },
+                        {
                             breakpoint: 540,
                             settings: {
                                 slidesToShow: 1,
@@ -77,6 +85,14 @@ jQuery(function ($) {
                     autoplaySpeed: 2000,
                     speed: 1000,
                     responsive: [
+                        {
+                            breakpoint: 900,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                                centerPadding: "20px"
+                            }
+                        },
                         {
                             breakpoint: 540,
                             settings: {

@@ -6,7 +6,7 @@
     <section class="bg-blue py-5 py-md-7 rounded-1">
         <div class="container">
             <div class="row gy-5">
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-4 col-lg-3">
                     <div class="row justify-content-center">
                         <div class="col-6 col-md-12">
                             <p class="fs-12 font-century text-primary pb-2">Learn more about us</p>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-4 col-lg-3">
                     <p class="fs-12 font-century text-primary pb-2">Explore all we have to offer</p>
                     <p class="fs-25 fw-500">Our Services</p>
 
@@ -53,7 +53,7 @@
                     </ul>
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-4 col-lg-3">
                     <p class="fs-12 font-century text-primary pb-2">Discover our luxury finishes</p>
                     <a href="<?= home_url() ?>/projects" class="fs-25 fw-500 text-white">Our Projects</a>
 
@@ -66,15 +66,15 @@
                     </ul>
                 </div>
 
-                <div class="col-12 col-md-3">
-                    <div class="row">
-                        <div class="col-6 col-md-12">
+                <div class="col-12 col-lg-3">
+                    <div class="row gy-lg-5">
+                        <div class="col-6 col-lg-12">
                             <p class="fs-12 font-century pb-2">Find us at</p>
                             <p class="fs-25 fw-500 text-primary"><?= get_field('location', 'options') ?></p>
                         </div>
 
-                        <div class="col-6 col-md-12">
-                            <p class="fs-12 font-century pt-md-5 pb-2">We are available during...</p>
+                        <div class="col-6 col-lg-12">
+                            <p class="fs-12 font-century pb-2">We are available during...</p>
                             <article class="fs-25 fw-500 text-primary"><?= get_field('opening_time', 'options') ?></article>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
 </div>
 
 <div class="container">
-    <div class="row justify-content-between align-items-center pt-7 pb-5 gy-5 gy-md-7">
+    <div class="row justify-content-center justify-content-lg-between align-items-center pt-7 pb-5 gy-5 gy-md-7">
         <div class="col-4 col-md-12 text-center order-3 order-md-1">
             <img src="<?= get_field('footer_logo', 'options')['url'] ?>" alt="<?= get_field('footer_logo', 'options')['url'] ?>" />
         </div>
@@ -106,8 +106,8 @@
             </div>
         </div>
 
-        <p class="col-auto fs-12 fw-300 text-light-blue order-1 order-md-3 text-center">
-            Copyright <?= date('Y') ?> <span class="px-5">/</span> <?= bloginfo('name') ?> <span class="px-5">/</span> All Rights Reserved
+        <p class="col-12 col-lg-auto fs-12 fw-300 text-light-blue order-1 order-md-3 text-center">
+            Copyright <?= date('Y') ?> <span class="px-3 px-lg-5">/</span> <?= bloginfo('name') ?> <span class="px-3 px-lg-5">/</span> All Rights Reserved
         </p>
 
         <div class="col-4 col-md-auto order-4">

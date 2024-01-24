@@ -84,7 +84,7 @@ get_template_part('parts/section', 'nav');
 
 <main class="frontpage mt-0">
     <?php $introduction = get_field('introduction'); ?>
-    <div class="container py-5 py-md-10">
+    <div class="container py-5 py-md-7 py-lg-10">
         <div class="mx-auto col-xl-7 text-center">
             <p class="text-primary fs-45 fw-500"><?= $introduction['title'] ?></p>
             <p class="pt-4 pt-md-5 fs-25"><?= $introduction['subtitle'] ?></p>
@@ -118,7 +118,7 @@ get_template_part('parts/section', 'nav');
         </div>
     </section>
 
-    <section class="py-6 py-md-10">
+    <section class="py-6 py-md-7 py-lg-10">
         <?php $projects = get_field('projects'); ?>
         <div class="container">
             <div class="col-xl-10 text-center mx-auto">
@@ -145,7 +145,7 @@ get_template_part('parts/section', 'nav');
         <?php $about = get_field('about'); ?>
         <div class="container">
             <div class="row gy-4 gx-3">
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-lg-5">
                     <div class="bg-white p-4">
                         <p class="fs-45 text-teal fw-500"><?= $about['title'] ?></p>
 
@@ -157,21 +157,21 @@ get_template_part('parts/section', 'nav');
                     </div>
                 </div>
 
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-lg-7">
                     <div class="embed h-100">
                         <?= $about['youtube'] ?>
                     </div>
                 </div>
             </div>
 
-            <div class="row gy-4 gx-3 pt-4">
+            <div class="row justify-content-center gy-4 gx-3 pt-4">
                 <?php if (have_rows('about')) :
                     while (have_rows('about')) : the_row();
                         if (have_rows('list')) :
                             $count = 1;
                             while (have_rows('list')) : the_row();
                 ?>
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-6 col-lg-4">
                                     <div class="cta-box <?= $count % 2 ? 'bg-teal' : 'bg-primary' ?> h-100">
                                         <p class="fs-45 text-deep-blue fw-500 text-capitalize"><?= get_sub_field('title') ?></p>
 

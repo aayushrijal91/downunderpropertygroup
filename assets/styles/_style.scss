@@ -29,7 +29,7 @@ main.frontpage {
         background: rgba(0, 173, 238, 0.1);
         padding: 168px 0 0;
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
             padding: 80px 0 0;
         }
 
@@ -66,6 +66,10 @@ main.frontpage {
                 border-right: 1.5px solid $primary;
                 padding: 20px 80px;
                 text-align: center;
+
+                @include media-breakpoint-down(lg) {
+                    padding: 20px 24px;
+                }
 
                 @include media-breakpoint-down(sm) {
                     padding: 20px;
