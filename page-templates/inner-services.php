@@ -17,31 +17,31 @@ get_template_part('parts/section', 'banner');
             <?php endif; ?>
             <p class="text-primary fs-45 fw-500"><?= $introduction['title'] ?></p>
 
-            <article class="description font-century pt-5 lh-1_67">
+            <article class="description font-century pt-4 pt-md-5 lh-1_67">
                 <?= $introduction['description'] ?>
             </article>
 
-            <div class="row justify-content-center pt-5 pb-4">
-                <div class="col-auto">
+            <div class="row justify-content-center py-4 pt-md-5 gy-2">
+                <div class="col-8 col-md-auto">
                     <a href="<?= get_field('contact_us_link', 'options')['url'] ?>" target="<?= get_field('contact_us_link', 'options')['target'] ?>" class="btn btn-purple rounded-1 text-white px-5 fs-14 fw-500">Contact Us</a>
                 </div>
 
-                <div class="col-auto">
+                <div class="col-8 col-md-auto">
                     <a href="<?= home_url() ?>/projects" class="btn border-2 border-purple rounded-1 text-purple px-4 fs-14 fw-500">Explore our projects</a>
                 </div>
             </div>
 
             <?php if (get_field('display_regulations')) : ?>
-                <div class="row justify-content-center gy-5 pt-5">
+                <div class="row justify-content-center gy-3 gy-md-5 gx-2 gx-md-3 pt-5">
                     <?php
                     if (have_rows('regulations')) :
                         $count = 1;
                         while (have_rows('regulations')) : the_row();
                     ?>
-                            <div class="col-4">
+                            <div class="col-6 col-md-4">
                                 <div class="h-100 d-flex flex-column align-items-center">
                                     <div class="number d-inline-flex mx-auto bg-primary rounded-pill fs-25 fw-500"><?= $count++ ?></div>
-                                    <div class="bg-blue p-4 flex-grow-1 w-100">
+                                    <div class="bg-blue p-4 flex-grow-1 w-100 mt-2">
                                         <p class="fs-25 pb-4"><?= get_sub_field('title'); ?></p>
                                         <img src="<?= get_sub_field('icon')['url'] ?>" alt="<?= get_sub_field('icon')['alt'] ?>" />
                                     </div>
@@ -57,19 +57,19 @@ get_template_part('parts/section', 'banner');
     </div>
 
     <?php $strategy = get_field('strategy'); ?>
-    <div class="container mt-10">
-        <div class="row justify-content-between gx-xl-5">
-            <div class="col-6">
+    <div class="container mt-5 mt-md-10">
+        <div class="row justify-content-between gx-xl-5 gy-5">
+            <div class="col-12 col-md-6">
                 <img src="<?= $strategy['image']['url'] ?>" alt="<?= $strategy['image']['alt'] ?>">
             </div>
 
             <!-- design 1 -->
             <?php if ($strategy['strategy_design'] == 'Design 1') : ?>
-                <div class="col-5">
-                    <p class="font-century lh-1_5 fs-25 pb-3"><?= $strategy['subtitle'] ?></p>
-                    <p class="text-primary fs-45 fw-500"><?= $strategy['title'] ?></p>
+                <div class="col-12 col-md-5">
+                    <p class="font-century text-center text-md-start lh-1_5 fs-25 pb-3"><?= $strategy['subtitle'] ?></p>
+                    <p class="text-primary text-center text-md-start fs-45 fw-500"><?= $strategy['title'] ?></p>
 
-                    <article class="description font-century py-5 lh-1_67">
+                    <article class="description text-center text-md-start font-century py-4 py-md-5 lh-1_67">
                         <?= $strategy['description'] ?>
                     </article>
 
@@ -97,7 +97,7 @@ get_template_part('parts/section', 'banner');
 
             <!-- design 2 -->
             <?php if ($strategy['strategy_design'] == 'Design 2') : ?>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <p class="font-century lh-1_5 fs-25 pb-3"><?= $strategy['subtitle'] ?></p>
                     <p class="text-primary fs-45 fw-500"><?= $strategy['title'] ?></p>
 
@@ -137,7 +137,7 @@ get_template_part('parts/section', 'banner');
 
             <!-- design 3 -->
             <?php if ($strategy['strategy_design'] == 'Design 3') : ?>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <p class="font-century lh-1_5 fs-25 pb-3"><?= $strategy['subtitle'] ?></p>
                     <p class="text-primary fs-45 fw-500"><?= $strategy['title'] ?></p>
 
@@ -177,14 +177,14 @@ get_template_part('parts/section', 'banner');
     <?php if (get_field('display_steps')) :
         $content = get_field('steps_content');
     ?>
-        <div class="container pt-10">
-            <section class="process bg-blue py-6">
+        <div class="container py-6 pt-md-10">
+            <section class="process bg-blue py-5 py-md-6">
                 <div class="col-11 col-xl-10 mx-auto">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-6">
-                            <p class="text-primary fs-25 font-bold"><?= $content['title'] ?></p>
+                    <div class="row justify-content-center justify-content-md-between align-items-center gy-4">
+                        <div class="col-12 col-md-6">
+                            <p class="text-primary fs-25 font-bold text-center text-md-start"><?= $content['title'] ?></p>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-8 col-md-auto">
                             <a href="<?= get_field('contact_us_link', 'options')['url'] ?>" target="<?= get_field('contact_us_link', 'options')['target'] ?>" class="btn btn-purple rounded-1 text-white px-4 px-xl-5 fs-14 fw-500">Contact Us</a>
                         </div>
                     </div>
@@ -195,15 +195,15 @@ get_template_part('parts/section', 'banner');
                         </article>
                     <?php endif; ?>
 
-                    <div class="row pt-9 gy-7 gx-xl-7">
+                    <div class="row pt-6 pt-md-9 gy-7 gx-xl-7">
                         <?php
                         $number = 1;
                         if (have_rows('steps')) :
                             while (have_rows('steps')) : the_row();
                         ?>
-                                <div class="col-6">
+                                <div class="col-12 col-md-6">
                                     <div class="d-flex justify-content-between flex-column h-100">
-                                        <div class="<?= ($number % 2) ? 'pb-7 order-1' : 'pt-7 order-2' ?>">
+                                        <div class="<?= ($number % 2) ? 'pb-4 pb-md-7 order-1' : 'pt-7 order-2' ?>">
                                             <p class="d-inline-flex text-primary rounded-pill step py-2 px-3 fs-25">Step <?= $number < 10 ? 0 : '' ?><?= $number ?></p>
                                             <p class="fs-45 lh-1 fw-500 py-4"><?= get_sub_field('title') ?></p>
 
@@ -228,18 +228,18 @@ get_template_part('parts/section', 'banner');
     <?php if (get_field('display_investment')) :
         $investment = get_field('investment'); ?>
 
-        <div class="container py-10">
-            <div class="bg-primary px-5 py-6">
+        <div class="container py-6 py-md-10">
+            <div class="bg-primary px-3 px-md-5 py-5 py-md-6">
                 <p class="fs-25"><?= $investment['subtitle'] ?></p>
 
-                <div class="row justify-content-around align-items-center pt-4">
-                    <div class="col-5">
+                <div class="row justify-content-around align-items-center pt-4 gy-5">
+                    <div class="col-12 col-md-5">
                         <img src="<?= $investment['image']['url'] ?>" alt="<?= $investment['image']['alt'] ?>">
                     </div>
-                    <div class="col-5">
+                    <div class="col-12 col-md-5">
                         <p class="fs-45 text-capitalize fw-500"><?= $investment['title'] ?></p>
 
-                        <article class="description font-century lh-1_67 py-5">
+                        <article class="description font-century lh-1_67 py-4 py-md-5">
                             <?= $investment['description'] ?>
                         </article>
 
