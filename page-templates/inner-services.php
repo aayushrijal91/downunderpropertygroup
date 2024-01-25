@@ -202,8 +202,8 @@ get_template_part('parts/section', 'banner');
                             while (have_rows('steps')) : the_row();
                         ?>
                                 <div class="col-12 col-md-6">
-                                    <div class="d-flex justify-content-between flex-column h-100">
-                                        <div class="<?= ($number % 2) ? 'pb-4 pb-md-7 order-1' : 'pt-7 order-2' ?>">
+                                    <div class="d-flex justify-content-between flex-column h-100 gap-4">
+                                        <div class="order-2 <?= ($number % 2) ? 'pb-4 pb-md-7 order-md-1' : 'pt-md-7 order-md-2' ?>">
                                             <p class="d-inline-flex text-primary rounded-pill step py-2 px-3 fs-25">Step <?= $number < 10 ? 0 : '' ?><?= $number ?></p>
                                             <p class="fs-45 lh-1 fw-500 py-4"><?= get_sub_field('title') ?></p>
 
@@ -212,7 +212,7 @@ get_template_part('parts/section', 'banner');
                                             </article>
                                         </div>
 
-                                        <img class="w-100 <?= ($number % 2) ? 'order-2' : 'order-1' ?>" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
+                                        <img class="w-100 order-1 <?= ($number % 2) ? 'order-md-2' : 'order-md-1' ?>" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
                                     </div>
                                 </div>
                         <?php

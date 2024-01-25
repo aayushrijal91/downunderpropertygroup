@@ -58,11 +58,27 @@
                     <a href="<?= home_url() ?>/projects" class="fs-25 fw-500 text-white">Our Projects</a>
 
                     <ul class="ps-0 pt-4 d-flex flex-column gap-3">
-                        <li><a href="" class="fs-14 text-light-blue fw-300">Project name 01</a></li>
-                        <li><a href="" class="fs-14 text-light-blue fw-300">Project name 02</a></li>
-                        <li><a href="" class="fs-14 text-light-blue fw-300">Project name 03</a></li>
-                        <li><a href="" class="fs-14 text-light-blue fw-300">Project name 04</a></li>
-                        <li><a href="" class="fs-14 text-light-blue fw-300">Project name 05</a></li>
+                        <?php
+                        $args = array(
+                            'post_type'      => 'page',
+                            'posts_per_page' => -1,
+                            'order'          => 'ASC',
+                            'orderby'        => 'publish_date',
+                            'meta_query' => array(
+                                array(
+                                    'key' => '_wp_page_template',
+                                    'value' => array('page-templates/inner-projects.php'),
+                                ),
+                            )
+                        );
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) : $the_query->the_post();
+                        ?>
+                                <li><a href="<?= get_the_permalink() ?>" class="fs-14 text-light-blue fw-300"><?= get_the_title() ?></a></li>
+                        <?php endwhile;
+                        endif;
+                        wp_reset_query(); ?>
                     </ul>
                 </div>
 

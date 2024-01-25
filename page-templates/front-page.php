@@ -23,7 +23,7 @@ get_template_part('parts/section', 'nav');
                 <div class="col-5">
                     <p class="fs-25 fw-500">
                         <span class="pe-4">Our Services</span>
-                        <a href="">
+                        <a href="javascript:void(0)">
                             <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="24.9512" cy="25.1802" r="24.9131" fill="#B083FB" />
                                 <path d="M26.1077 15.9346L35.3539 25.1808L26.1077 34.4271" stroke="#F3FAFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -70,11 +70,27 @@ get_template_part('parts/section', 'nav');
                     </p>
 
                     <ul class="ps-0 mt-3 d-flex flex-column gap-1">
-                        <li><a href="" class="text-white text-capitalize font-century">Project Name 01</a></li>
-                        <li><a href="" class="text-white text-capitalize font-century">Project Name 02</a></li>
-                        <li><a href="" class="text-white text-capitalize font-century">Project Name 03</a></li>
-                        <li><a href="" class="text-white text-capitalize font-century">Project Name 04</a></li>
-                        <li><a href="" class="text-white text-capitalize font-century">Project Name 05</a></li>
+                        <?php
+                        $args = array(
+                            'post_type'      => 'page',
+                            'posts_per_page' => -1,
+                            'order'          => 'ASC',
+                            'orderby'        => 'publish_date',
+                            'meta_query' => array(
+                                array(
+                                    'key' => '_wp_page_template',
+                                    'value' => array('page-templates/inner-projects.php'),
+                                ),
+                            )
+                        );
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) : $the_query->the_post();
+                        ?>
+                                <li><a href="<?= get_the_permalink() ?>" class="text-white text-capitalize font-century"><?= get_the_title() ?></a></li>
+                        <?php endwhile;
+                        endif;
+                        wp_reset_query(); ?>
                     </ul>
                 </div>
             </div>
