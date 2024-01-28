@@ -126,7 +126,15 @@ jQuery(function ($) {
                     arrows: false,
                     dots: true,
                     autoplay: true,
-                })
+                });
+
+                $("#show-sliding-menu").on('click', function() {
+                    $('#sliding-menu').addClass('active');
+                });
+
+                $("#hide-sliding-menu").on('click', function() {
+                    $('#sliding-menu').removeClass('active');
+                });
             }, // end misc
         }, // end ui
         //utils: {
