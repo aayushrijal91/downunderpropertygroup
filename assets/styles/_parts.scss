@@ -96,6 +96,10 @@ section.banner {
         &.slick-current.slick-center {
             width: 988px;
 
+            @include media-breakpoint-down(lg) {
+                width: 750px;
+            }
+
             @include media-breakpoint-down(sm) {
                 width: 320px;
             }
