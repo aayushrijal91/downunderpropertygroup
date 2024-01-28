@@ -23,7 +23,7 @@
         $count = 1;
         while ($the_query->have_posts()) : $the_query->the_post();
     ?>
-            <div class="service-fold service-fold-<?= $count++ ?> <?= $count > 1 ? 'service-fold-negative-margin' : '' ?>">
+            <div class="service-fold service-fold-<?= $count ?> <?= $count > 1 ? 'service-fold-negative-margin' : '' ?>">
                 <img src="<?= get_field('banner')['hero_image']['url'] ?>" alt="<?= get_field('banner')['hero_image']['alt'] ?>" class="position-absolute top-0 left-0 w-100 h-100 object-fit-cover">
 
                 <div class="overlay position-relative">
@@ -47,7 +47,9 @@
                     </div>
                 </div>
             </div>
-    <?php endwhile;
+    <?php
+            $count++;
+        endwhile;
     endif;
     wp_reset_query(); ?>
 
