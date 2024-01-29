@@ -32,7 +32,7 @@ get_template_part('parts/section', 'banner');
                         </svg>
                     </div>
 
-                    <p class="fs-25 fw-500"><?= get_field('admin_email', 'options') ?></p>
+                    <p class="fs-16 fw-500"><?= get_field('admin_email', 'options') ?></p>
                 </div>
             </div>
 

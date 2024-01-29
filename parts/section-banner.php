@@ -9,7 +9,7 @@
             <?php endif; ?>
 
             <?php if (isset($banner['next_page_link']) && !empty($banner['next_page_link']['url']) && !empty($banner['link_title'])) : ?>
-                <div class="col-md-4 col-xl-3 d-none d-md-block">
+                <div class="col-md-4 d-none d-md-block">
                     <a href="<?= $banner['next_page_link']['url'] ?>" target="<?= $banner['next_page_link']['target'] ?>" class="fs-25 fw-500 d-flex align-items-center justify-content-end gap-3">
                         <span><?= $banner['link_title'] ?></span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="51" height="21" viewBox="0 0 51 21" fill="none">
