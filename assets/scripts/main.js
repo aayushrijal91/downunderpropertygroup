@@ -128,13 +128,20 @@ jQuery(function ($) {
                     autoplay: true,
                 });
 
-                $("#show-sliding-menu").on('click', function() {
+                $("#show-sliding-menu").on('click', function () {
                     $('#sliding-menu').addClass('active');
                 });
 
-                $("#hide-sliding-menu").on('click', function() {
+                $("#hide-sliding-menu").on('click', function () {
                     $('#sliding-menu').removeClass('active');
                 });
+
+                $('.accordion-head').on('click', function (e) {
+                    e.preventDefault();
+
+                    $('.accordion .content').slideUp();
+                    $(this).parents('.accordion').find('.content').slideDown();
+                })
             }, // end misc
         }, // end ui
         //utils: {

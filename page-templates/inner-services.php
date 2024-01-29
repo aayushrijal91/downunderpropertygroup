@@ -113,19 +113,24 @@ get_template_part('parts/section', 'banner');
 
                                 while (have_rows('list')) : the_row();
                     ?>
-                                    <div class="d-flex align-items-center justify-content-between gap-4 bg-blue p-3 <?= $number > 1 ? 'mt-3' : '' ?>">
-                                        <div class="d-flex align-items-center justify-content-between gap-4">
-                                            <div class="number rounded-pill fs-25 fw-500 text-primary"><?= $number++ ?></div>
-                                            <p class="lh-1_5 fs-25 fw-300"><?= get_sub_field('title') ?></p>
-                                        </div>
+                                    <article class="accordion bg-blue">
+                                        <div class="accordion-head d-flex align-items-center justify-content-between gap-4 p-3 <?= $number > 1 ? 'mt-3' : '' ?>">
+                                            <div class="d-flex align-items-center justify-content-between gap-4">
+                                                <div class="number rounded-pill fs-25 fw-500 text-primary"><?= $number++ ?></div>
+                                                <p class="lh-1_5 fs-25 fw-300"><?= get_sub_field('title') ?></p>
+                                            </div>
 
-                                        <div class="btn outline-none">
-                                            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M15.7207 2.44409L15.7207 28.9417" stroke="#B083FB" stroke-width="3" stroke-linecap="round" />
-                                                <path d="M1.70264 14.9238L28.2002 14.9238" stroke="#B083FB" stroke-width="3" stroke-linecap="round" />
-                                            </svg>
+                                            <button class="btn outline-none">
+                                                <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.7207 2.44409L15.7207 28.9417" stroke="#B083FB" stroke-width="3" stroke-linecap="round" />
+                                                    <path d="M1.70264 14.9238L28.2002 14.9238" stroke="#B083FB" stroke-width="3" stroke-linecap="round" />
+                                                </svg>
+                                            </button>
                                         </div>
-                                    </div>
+                                        <div class="content bg-blue p-3">
+                                            <p><?= get_sub_field('description') ?></p>
+                                        </div>
+                                    </article>
                     <?php
                                 endwhile;
                             endif;

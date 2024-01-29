@@ -211,7 +211,6 @@ main.innerServicePage {
         display: flex;
         justify-content: center;
         align-items: center;
-        // margin-bottom: 12px;
         background: rgba(53, 151, 175, 0.2);
     }
 
@@ -223,6 +222,12 @@ main.innerServicePage {
     section.process {
         .step {
             background: rgba(105, 194, 219, 0.2);
+        }
+    }
+
+    .accordion {
+        .content {
+            display: none;
         }
     }
 }
