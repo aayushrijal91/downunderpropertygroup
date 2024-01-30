@@ -30,17 +30,25 @@ nav {
             }
 
             .sub-menu.dropdown-menu {
-                --bs-dropdown-min-width: 17rem;
-                background-color: $blue !important;
-                border: 2px solid $purple !important;
-                top: 100%;
+                --bs-dropdown-min-width: 20rem;
+                background-color: rgba(53, 151, 175, 0.6) !important;
+                backdrop-filter: blur(10px);
+                border: none !important;
+                border-radius: 10px;
+                top: 135%;
                 left: 0;
-                padding: 16px 8px;
+                padding: 16px 20px;
+                flex-direction: column;
+                gap: 20px;
+
+                li {
+                    border-bottom: 1px solid $primary;
+                }
             }
 
-            &:hover {
+            &.active {
                 .sub-menu.dropdown-menu {
-                    display: block;
+                    display: flex;
                 }
             }
         }
@@ -222,6 +230,13 @@ section.commonform {
             &::placeholder {
                 color: $white;
             }
+
+            &.form-select option {
+                margin: 40px;
+                background-color: $teal;
+                padding: 8px 0;
+            }
+            
         }
     }
 }

@@ -141,7 +141,11 @@ jQuery(function ($) {
 
                     $('.accordion .content').slideUp();
                     $(this).parents('.accordion').find('.content').slideDown();
-                })
+                });
+
+                $('.nav-item.dropdown').on('click', function() {
+                    $(this).toggleClass('active');
+                });
             }, // end misc
         }, // end ui
         //utils: {
