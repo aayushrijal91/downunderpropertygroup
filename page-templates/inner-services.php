@@ -217,7 +217,7 @@ get_template_part('parts/section', 'banner');
                                     </div>
 
                                     <div class="col-md-6 order-1 py-4 <?= ($number % 2) ? 'order-md-2' : 'order-md-1 border-xl-end' ?>">
-                                        <div class="image">
+                                        <div class="image <?= ($number % 2) ? '' : 'mt-n10' ?>">
                                             <img class="w-100 h-100 object-fit-cover" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
                                         </div>
                                     </div>
