@@ -200,24 +200,26 @@ get_template_part('parts/section', 'banner');
                         </article>
                     <?php endif; ?>
 
-                    <div class="row pt-6 pt-md-9 gy-7 gx-xl-7">
+                    <div class="pt-6 pt-md-9">
                         <?php
                         $number = 1;
                         if (have_rows('steps')) :
                             while (have_rows('steps')) : the_row();
                         ?>
-                                <div class="col-12 col-md-6">
-                                    <div class="d-flex justify-content-between flex-column h-100 gap-4">
-                                        <div class="order-2 <?= ($number % 2) ? 'pb-4 pb-md-7 order-md-1' : 'pt-md-7 order-md-2' ?>">
-                                            <p class="d-inline-flex text-primary rounded-pill step py-2 px-3 fs-25">Step <?= $number < 10 ? 0 : '' ?><?= $number ?></p>
-                                            <p class="fs-45 lh-1 fw-500 py-4"><?= get_sub_field('title') ?></p>
+                                <div class="row justify-content-between gx-xl-7">
+                                    <div class="col-md-6 border-1 border-white order-2 py-4 <?= ($number % 2) ? 'order-md-1 border-xl-end' : 'order-md-2' ?>">
+                                        <p class="d-inline-flex text-primary rounded-pill step py-2 px-3 fs-25">Step <?= $number < 10 ? 0 : '' ?><?= $number ?></p>
+                                        <p class="fs-45 lh-1 fw-500 py-4"><?= get_sub_field('title') ?></p>
 
-                                            <article class="description fw-300 font-century lh-1_67">
-                                                <?= get_sub_field('description') ?>
-                                            </article>
+                                        <article class="description fw-300 font-century lh-1_67">
+                                            <?= get_sub_field('description') ?>
+                                        </article>
+                                    </div>
+
+                                    <div class="col-md-6 order-1 py-4 <?= ($number % 2) ? 'order-md-2' : 'order-md-1 border-xl-end' ?>">
+                                        <div class="image">
+                                            <img class="w-100 h-100 object-fit-cover" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
                                         </div>
-
-                                        <img class="w-100 order-1 <?= ($number % 2) ? 'order-md-2' : 'order-md-1' ?>" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
                                     </div>
                                 </div>
                         <?php

@@ -223,6 +223,16 @@ main.innerServicePage {
         .step {
             background: rgba(105, 194, 219, 0.2);
         }
+
+        .image {
+            height: 450px;
+        }
+
+        .border-xl-end {
+            @include media-breakpoint-up(xl) {
+                border-right: 1px solid;
+            }
+        }
     }
 
     .accordion {
