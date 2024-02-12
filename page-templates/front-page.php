@@ -20,7 +20,7 @@ get_template_part('parts/section', 'nav');
     <div class="services pb-5 d-none d-md-block">
         <div class="container">
             <div class="row">
-                <div class="col-5">
+                <div class="col-12 col-lg-5">
                     <p class="fs-25 fw-500">
                         <span class="pe-4">Our Services</span>
                         <a href="javascript:void(0)">
@@ -57,7 +57,7 @@ get_template_part('parts/section', 'nav');
                     </ul>
                 </div>
 
-                <div class="col-5">
+                <!-- <div class="col-5">
                     <p class="fs-25 fw-500">
                         <span class="pe-4">Our Projects</span>
                         <a href="<?= home_url() ?>/projects">
@@ -92,7 +92,7 @@ get_template_part('parts/section', 'nav');
                         endif;
                         wp_reset_query(); ?>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -134,7 +134,7 @@ get_template_part('parts/section', 'nav');
         </div>
     </section>
 
-    <section class="py-6 py-md-7 py-lg-10">
+    <!-- <section class="py-6 py-md-7 py-lg-10">
         <?php $projects = get_field('projects'); ?>
         <div class="container">
             <div class="col-xl-10 text-center mx-auto">
@@ -155,7 +155,7 @@ get_template_part('parts/section', 'nav');
         </div>
 
         <?php get_template_part('parts/section', 'homeprojectsslider'); ?>
-    </section>
+    </section> -->
 
     <section class="who-we-are">
         <?php $about = get_field('about'); ?>
@@ -174,9 +174,7 @@ get_template_part('parts/section', 'nav');
                 </div>
 
                 <div class="col-12 col-lg-7">
-                    <div class="embed h-100">
-                        <?= $about['youtube'] ?>
-                    </div>
+                    <img class="h-100 w-100 object-fit-cover" src="<?= $about['image']['url'] ?>" alt="<?= $about['image']['alt'] ?>">
                 </div>
             </div>
 

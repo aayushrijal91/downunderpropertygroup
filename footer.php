@@ -53,7 +53,7 @@
                     </ul>
                 </div>
 
-                <div class="col-12 col-md-4 col-lg-3">
+                <!-- <div class="col-12 col-md-4 col-lg-3">
                     <p class="fs-12 font-century text-primary pb-2">Discover our luxury finishes</p>
                     <a href="<?= home_url() ?>/projects" class="fs-25 fw-500 text-white">Our Projects</a>
 
@@ -80,9 +80,9 @@
                         endif;
                         wp_reset_query(); ?>
                     </ul>
-                </div>
+                </div> -->
 
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-lg-6">
                     <div class="row gy-lg-5">
                         <div class="col-6 col-lg-12">
                             <p class="fs-12 font-century pb-2">Find us at</p>
